@@ -1,16 +1,22 @@
 package model;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CuriosityBox {
     private List<String> data;
     private String operation;
+    private ArrayList<String> operands;
     private String result;
 
     // EFFECTS: set is empty
     public CuriosityBox() {
         data = new ArrayList<>();
+        operation = "";
+        operands = new ArrayList<>();
+        result = "";
+
     }
 
     // MODIFIES: this
@@ -31,16 +37,20 @@ public class CuriosityBox {
 
     // EFFECTS: Returns true if String s is in the QuoteSet
     // and false otherwise
-    public boolean contains(String s) {
+    private boolean contains(String s) {
         return data.contains(s);
     }
 
 
-    public static void setOperation(String operation) {
+    public void setOperation(String operation) {
         this.operation = operation;
     }
 
-    public static void setResult(String result) {
+    public void addOperand(String operand) {
+        operands.add(operand);
+    }
+
+    public void setResult(String result) {
         this.result = result;
     }
 

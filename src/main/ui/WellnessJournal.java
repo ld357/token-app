@@ -10,10 +10,11 @@ public class WellnessJournal {
     private ArrayList<CuriosityBox> operationLog;
     private Scanner scanner;
 
-    public WellnessJournal() {
+    private WellnessJournal() {
         operationLog = new ArrayList<>();
         scanner = new Scanner(System.in);
         processOperations();
+
     }
 
     private void processOperations() {
@@ -22,7 +23,7 @@ public class WellnessJournal {
 
         while (true) {
             // while is a loop, end with break
-            System.out.println("Please select an option (add thought or remove a thought or quit):");
+            System.out.println("Please select an option (add thought or remove most recent thought or quit):");
             operation = scanner.nextLine();
             System.out.println("You selected: " + operation);
 
@@ -30,27 +31,24 @@ public class WellnessJournal {
                 break;
             }
 
-            if (operation.equals("add thought")) {
-                CuriosityBox thoughtA = new CuriosityBox();
-            }
-
-            if (operation.equals("remove a thought")) {
-                operationLog.remove(operation);
-            }
-
+            String result = processOperation(curiosityBox, operation);
+            System.out.println("you wrote:" + result);
         }
+
+        System.out.println("Your full message: " + operationLog);
     }
+
 
     private String processOperation(CuriosityBox curiosityBox, String operation) {
         String result = "";
 
-        System.out.println("What are you currently curious about?" + operation);
+        System.out.println("What are you currently curious about?");
         String first = scanner.next();
-        System.out.println("What else would you like to add?" + operation);
+        System.out.println("What else are you thinking about?");
         String second = scanner.next();
         scanner.nextLine();
 
-        if (operation.equals("")) {
+        if (operation.equals("I am curious about..." + operation)) { // ASK TA!!!
             result = first + second;
         }
 
@@ -60,18 +58,19 @@ public class WellnessJournal {
 
     }
 
+
     private void logResult(CuriosityBox curiosityBox, String operation, String first, String second, String result) {
-    }
-
-
-    private void logResult(CuriosityBox curiosityBox, String operation, String result) {
-        CuriosityBox.setOperation(operation);
-        CuriosityBox.setResult(result);
+        //CuriosityBox.setOperation(operation);
+        //CuriosityBox.addOperand(first);
+       // CuriosityBox.addOperand(second);
+       // CuriosityBox.setResult(result);
+        operationLog.add(curiosityBox);
 
     }
 
 
     public static void main(String[] args) {
+        new WellnessJournal();
         Quotes mySet = new Quotes();
         mySet.insert("Never let your fear decide your fate.");
         mySet.insert("Dwell on the beauty of life. Watch the stars, and see yourself running with them.");
@@ -83,10 +82,10 @@ public class WellnessJournal {
         new GoalSetter();
         new MoodTracker();
 
-        Person p = new Person();
-        p.findPeace();
-        p.doBetter();
-        p.stayHydrated();
+        GoalSetter p2 = new GoalSetter();
+        p2.countGoals(2);
+
+
 
 
     }

@@ -8,10 +8,9 @@ public class GoalSetter {
     public void drinkWater() {
         System.out.println("Drink more water!");
         getBottle();
-        drinkWater();
     }
 
-    public void getBottle() {
+    private void getBottle() {
         System.out.println("Get your water bottle");
     }
 
@@ -23,10 +22,11 @@ public class GoalSetter {
         System.out.println("What gives you energy?");
     }
 
-    public void printGoals(int x) {
+    public void countGoals(int x) {
         for (int i = 0; i < x; i++) {
             System.out.println("This is goal number" + (i));
         }
+
     }
 
 
