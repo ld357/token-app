@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WellnessJournal {
-    private ArrayList<CuriosityBox> operationLog;
+    public ArrayList<CuriosityBox> operationLog;
     private Scanner scanner;
 
     private WellnessJournal() {
