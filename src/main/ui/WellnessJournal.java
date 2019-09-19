@@ -25,14 +25,22 @@ public class WellnessJournal {
             // while is a loop, end with break
             System.out.println("Please select an option (add thought or remove most recent thought or quit):");
             operation = scanner.nextLine();
-            System.out.println("You selected: " + operation);
+            System.out.println("You wrote: " + operation);
 
             if (operation.equals("quit")) {
                 break;
             }
 
-            String result = processOperation(curiosityBox, operation);
-            System.out.println("you wrote:" + result);
+            if (operation.equals("add thought")) {
+                String result = processOperation(curiosityBox, operation);
+                System.out.println("you wrote:" + result);
+            }
+
+            if (operation.equals("remove most recent thought")) {
+                ///// remove method in here
+                System.out.println("Your thought has been removed.");
+            }
+
         }
 
         System.out.println("Your full message: " + operationLog);
@@ -63,7 +71,7 @@ public class WellnessJournal {
         //CuriosityBox.setOperation(operation);
         //CuriosityBox.addOperand(first);
        // CuriosityBox.addOperand(second);
-       // CuriosityBox.setResult(result);
+      // CuriosityBox.setResult(result);
         operationLog.add(curiosityBox);
 
     }
@@ -77,9 +85,6 @@ public class WellnessJournal {
 
         System.out.println(mySet.size());
 
-        new ActivityReminder();
-        new CuriosityBox();
-        new GoalSetter();
         new MoodTracker();
 
         GoalSetter p2 = new GoalSetter();

@@ -23,7 +23,7 @@ public class GoalSetter {
     }
 
     public void countGoals(int x) {
-        for (int i = 0; i < x; i++) {
+        for (int i = 0; i <= x; i++) {
             System.out.println("This is goal number" + (i));
         }
 
