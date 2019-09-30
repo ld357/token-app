@@ -1,7 +1,11 @@
 package model;
 
+import model.activities.Activities;
+import model.quotes.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,6 +14,9 @@ class MotivationToolTest {
     String testAuthor;
     String testQuote;
     Boolean testStatus;
+    HashSet<Activities> testHomepageData;
+    HashSet<Activities> testSelectionData;
+
 
     @BeforeEach
     void setUp() {
@@ -17,71 +24,121 @@ class MotivationToolTest {
     }
 
     @Test
-    void testQ1() {
-        testAuthor = "William Arthur Ward";
+    void testQ1A() {
+        Quotes testQ1 = new Quote1();
+       // testAuthor = "William Arthur Ward";
         testStatus = false;
         testQuote = "When we seek to discover the best in others,we somehow bring out the best in ourselves";
-        testMotivationTool.q1();
-        assertEquals(testAuthor, testMotivationTool.getAuthor());
-        assertEquals(testQuote, testMotivationTool.getQuote());
-        assertEquals(testStatus, testMotivationTool.getStatus());
+      //  assertEquals(testAuthor, testQ1.getAuthor());
+        assertEquals(testQuote, testQ1.getQuote());
+        assertEquals(testStatus, testQ1.getStatus());
+    }
+
+    @Test
+    void testQ1B() {
+        Authors testA1 = new Author1();
+        testAuthor = "William Arthur Ward";
+        assertEquals(testAuthor, testA1.getAuthor());
+
     }
 
 
 
     @Test
-    void testQ2() {
-        testAuthor = "John Wooden";
+    void testQ2A() {
+        Quotes testQ2 = new Quote2();
+       // testAuthor = "John Wooden";
         testStatus = false;
         testQuote = "Make each day your masterpiece";
-        testMotivationTool.q2();
-        assertEquals(testAuthor,testMotivationTool.getAuthor());
-        assertEquals(testQuote, testMotivationTool.getQuote());
-        assertEquals(testStatus, testMotivationTool.getStatus());
+        // assertEquals(testAuthor,testQ2.getAuthor());
+        assertEquals(testQuote, testQ2.getQuote());
+        assertEquals(testStatus, testQ2.getStatus());
     }
 
     @Test
-    void testQ3() {
-        testAuthor = "Unknown";
+    void testQ2B() {
+        Authors testA2 = new Author2();
+        testAuthor = "John Wooden";
+        assertEquals(testAuthor, testA2.getAuthor());
+
+    }
+
+
+    @Test
+    void testQ3A() {
+        Quotes testQ3 = new Quote3();
+        // testAuthor = "Unknown";
         testStatus = false;
-        testQuote = "People overestimate what they can do in a single day.And underestimate what they can do in their whole lives";
-        testMotivationTool.q3();
-        assertEquals(testAuthor,testMotivationTool.getAuthor());
-        assertEquals(testQuote, testMotivationTool.getQuote());
-        assertEquals(testStatus, testMotivationTool.getStatus());
+        testQuote = "People overestimate what they can do in a single day." +
+                "And underestimate what they can do in their whole lives";
+        // assertEquals(testAuthor,testMotivationTool.getAuthor());
+        assertEquals(testQuote, testQ3.getQuote());
+        assertEquals(testStatus, testQ3.getStatus());
     }
 
     @Test
-    void testQ4() {
-        testAuthor = "Marcus Aurelius";
+    void testQ3B() {
+        Authors testA3 = new Author3();
+        testAuthor = "Unknown";
+        assertEquals(testAuthor, testA3.getAuthor());
+
+    }
+
+    @Test
+    void testQ4A() {
+      //  testAuthor = "Marcus Aurelius";
+        Quotes testQ4 = new Quote4();
         testStatus = false;
         testQuote = "Dwell on the beauty of life. Watch the stars,and see yourself running with them";
-        testMotivationTool.q4();
-        assertEquals(testAuthor,testMotivationTool.getAuthor());
-        assertEquals(testQuote, testMotivationTool.getQuote());
-        assertEquals(testStatus, testMotivationTool.getStatus());
+      //  assertEquals(testAuthor,testMotivationTool.getAuthor());
+        assertEquals(testQuote, testQ4.getQuote());
+        assertEquals(testStatus, testQ4.getStatus());
     }
 
     @Test
-    void testQ5() {
-        testAuthor = "Scott Adams";
+    void testQ4B() {
+        Authors testA4 = new Author4();
+        testAuthor = "Marcus Aurelius";
+        assertEquals(testAuthor, testA4.getAuthor());
+
+    }
+
+    @Test
+    void testQ5A() {
+        // testAuthor = "Scott Adams";
+        Quotes testQ5 = new Quote5();
         testStatus = false;
         testQuote = "There’s no such things as a small act of kindness." +
                 "Every act creates a ripple with no logical end";
-        testMotivationTool.q5();
-        assertEquals(testAuthor,testMotivationTool.getAuthor());
-        assertEquals(testQuote, testMotivationTool.getQuote());
-        assertEquals(testStatus, testMotivationTool.getStatus());
+       // assertEquals(testAuthor,testMotivationTool.getAuthor());
+        assertEquals(testQuote, testQ5.getQuote());
+        assertEquals(testStatus, testQ5.getStatus());
+    }
+
+    @Test
+    void test5B() {
+        Authors testA5 = new Author5();
+        testAuthor = "Scott Adams";
+        assertEquals(testAuthor, testA5.getAuthor());
+
+    }
+
+
+    @Test
+    void testAddFavourite() {
+        Quotes testQ1 = new Quote1();
+        testMotivationTool.addFavourite(testQ1);
+        assertEquals(1, testMotivationTool.getFavouriteList().size());
     }
 
 
 
     @Test
-    void testSetFavourite() {
-        testStatus = true;
-        MotivationTool testq1 = new MotivationTool();
-        testMotivationTool.setFavourite(testq1);
-        assertEquals(testStatus, testMotivationTool.getStatus());
+    void testRemoveFavourite() {
+        Quotes testQ1 = new Quote1();
+        testMotivationTool.addFavourite(testQ1);
+        testMotivationTool.removeFavourite(testQ1);
+        assertEquals(0, testMotivationTool.getFavouriteList().size());
     }
 
 

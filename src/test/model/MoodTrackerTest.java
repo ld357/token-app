@@ -1,81 +1,78 @@
 package model;
 
+import model.moods.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import model.MoodTracker;
+import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MoodTrackerTest {
     MoodTracker testMoodTracker;
-    MoodTracker testAmazing;
+    Moods testAmazing;
     String testName;
     int testNum;
-    MoodTracker testMoodChoice;
-    ArrayList<MoodTracker> testHomepageData;
-    ArrayList<MoodTracker> testAllMoods;
+    Moods testMoodChoice;
+    HashSet<Moods> testHomepageData;
+    HashSet<Moods> testSelectionData;
 
 
     @BeforeEach
     void setUp() {
         testMoodTracker = new MoodTracker();
-        testAmazing = new MoodTracker();
-        testAmazing.amazing();
     }
 
     @Test
     void testAmazing() {
+        Moods testAmazing = new Amazing();
         testNum = 5;
         testName = "amazing";
-        testMoodTracker.amazing();
-        assertEquals(testNum, testMoodTracker.getMoodNum());
-        assertEquals(testName, testMoodTracker.getMoodName());
+        assertEquals(testNum, testAmazing.getMoodNum());
+        assertEquals(testName, testAmazing.getMoodName());
     }
 
 
 
     @Test
     void testContent() {
+        Moods testContent = new Content();
         testNum = 4;
         testName = "content";
-        testMoodTracker.content();
-        assertEquals(testNum, testMoodTracker.getMoodNum());
-        assertEquals(testName, testMoodTracker.getMoodName());
+        assertEquals(testNum, testContent.getMoodNum());
+        assertEquals(testName, testContent.getMoodName());
     }
 
     @Test
     void testMeh() {
+        Moods testMeh = new Meh();
         testNum = 3;
         testName = "meh";
-        testMoodTracker.meh();
-        assertEquals(testNum, testMoodTracker.getMoodNum());
-        assertEquals(testName, testMoodTracker.getMoodName());
+        assertEquals(testNum, testMeh.getMoodNum());
+        assertEquals(testName, testMeh.getMoodName());
     }
 
     @Test
     void testBad() {
+        Moods testBad = new Bad();
         testNum = 2;
         testName = "bad";
-        testMoodTracker.bad();
-        assertEquals(testNum, testMoodTracker.getMoodNum());
-        assertEquals(testName, testMoodTracker.getMoodName());
+        assertEquals(testNum, testBad.getMoodNum());
+        assertEquals(testName, testBad.getMoodName());
     }
 
     @Test
     void testTerrible() {
+        Moods testTerrible = new Terrible();
         testNum = 1;
         testName = "terrible";
-        testMoodTracker.terrible();
-        assertEquals(testNum, testMoodTracker.getMoodNum());
-        assertEquals(testName, testMoodTracker.getMoodName());
+        assertEquals(testNum, testTerrible.getMoodNum());
+        assertEquals(testName, testTerrible.getMoodName());
     }
 
     @Test
     void testAddMood() {
-        MoodTracker amazing = new MoodTracker();
+        Moods testAmazing = new Amazing();
         testMoodTracker.addMood(testAmazing);
         assertEquals(1, testMoodTracker.getHD().size());
     }
@@ -83,10 +80,10 @@ class MoodTrackerTest {
 
     @Test
     void testChangeMood() {
-        MoodTracker content = new MoodTracker();
-        testMoodTracker.changeMood(content);
-        testMoodChoice = content;
-        assertEquals(testMoodChoice, testMoodTracker.getMoodChoice());
+        Moods testContent = new Content();
+        testMoodTracker.changeMood(testContent);
+        testMoodChoice = testContent;
+        assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testContent));
     }
 
 }

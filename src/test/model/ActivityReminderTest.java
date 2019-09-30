@@ -1,121 +1,130 @@
 package model;
 
+import model.activities.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ActivityReminderTest {
     ActivityReminder testReminders;
+    Activities testBreathe;
     String testName;
     String testStatus;
+    Activities testActChoice;
+    HashSet<Activities> testHomepageData;
+    HashSet<Activities> testSelectionData;
+
 
 
     @BeforeEach
     void setUp() {
         testReminders = new ActivityReminder();
 
+
     }
 
     @Test
     void testHydrate() {
+        Activities testHydrate = new Hydrate();
         testName = "Hydrate";
         testStatus = "today";
-        testReminders.hydrate();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testHydrate.getActivityName());
+        assertEquals(testStatus, testHydrate.getStatus());
     }
 
 
     @Test
     void testExercise() {
+        Activities testExercise = new Exercise();
         testName = "Exercise";
         testStatus = "today";
-        testReminders.exercise();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testExercise.getActivityName());
+        assertEquals(testStatus, testExercise.getStatus());
     }
 
     @Test
     void testBreathe() {
+        Activities testExercise = new Breathe();
         testName = "Breathe";
         testStatus = "today";
-        testReminders.breathe();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testExercise.getActivityName());
+        assertEquals(testStatus, testExercise.getStatus());
     }
 
     @Test
     void testRest() {
+        Activities testRest = new Rest();
         testName = "Rest";
         testStatus = "today";
-        testReminders.rest();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testRest.getActivityName());
+        assertEquals(testStatus, testRest.getStatus());
     }
 
     @Test
     void testRevitalize() {
+        Activities testRevitalize = new Revitalize();
         testName = "Revitalize";
         testStatus = "today";
-        testReminders.revitalize();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testRevitalize.getActivityName());
+        assertEquals(testStatus, testRevitalize.getStatus());
     }
 
     @Test
     void testRefresh() {
+        Activities testRefresh = new Refresh();
         testName = "Refresh";
         testStatus = "today";
-        testReminders.refresh();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testRefresh.getActivityName());
+        assertEquals(testStatus, testRefresh.getStatus());
     }
 
     @Test
     void testInteract() {
+        Activities testInteract = new Interact();
         testName = "Interact";
         testStatus = "today";
-        testReminders.interact();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testInteract.getActivityName());
+        assertEquals(testStatus, testInteract.getStatus());
     }
 
     @Test
     void testInspire() {
+        Activities testInspire = new Inspire();
         testName = "Inspire";
         testStatus = "today";
-        testReminders.inspire();
-        assertEquals(testName, testReminders.getActivityName());
-        assertEquals(testStatus, testReminders.getStatus());
+        assertEquals(testName, testInspire.getActivityName());
+        assertEquals(testStatus, testInspire.getStatus());
     }
 
     @Test
     void testCheckIn() {
         testStatus = "today";
-        ActivityReminder testhydrate = new ActivityReminder();
-        testReminders.checkIn(testhydrate);
-        assertEquals(testStatus, testReminders.getStatus());
+        Activities testInspire = new Inspire();
+        testReminders.checkIn(testInspire);
+        assertEquals(testStatus, testInspire.getStatus());
     }
 
 
     @Test
     void testAddActivity() {
-        ActivityReminder testRelax = new ActivityReminder();
-        testReminders.addActivity(testRelax);
-        assertEquals(1, testReminders.getHomepagedata().size());
-
+        Activities testInspire = new Inspire();
+        testReminders.addActivity(testInspire);
+        assertEquals(1, testReminders.getHomepageData().size());
     }
+
+
 
 
 
     @Test
     void testRemoveActivity() {
-        ActivityReminder testRelax = new ActivityReminder();
-        testReminders.addActivity(testRelax);
-        testReminders.removeActivity(testRelax);
-        assertEquals(0, testReminders.getHomepagedata().size());
+        Activities testInspire = new Inspire();
+        testReminders.addActivity(testInspire);
+        testReminders.removeActivity(testInspire);
+        assertEquals(0, testReminders.getHomepageData().size());
     }
 
 

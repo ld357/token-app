@@ -1,11 +1,9 @@
 package ui;
 
-import model.ActivityReminder;
-import model.CuriosityBoxEntry;
-import model.MoodTracker;
-import model.MotivationTool;
-
-import java.util.ArrayList;
+import model.activities.ActivityReminder;
+import model.CuriosityEntry;
+import model.moods.MoodTracker;
+import model.quotes.MotivationTool;
 
 public class Cheer {
 
@@ -16,25 +14,11 @@ public class Cheer {
         new Cheer();
 
         ActivityReminder activity = new ActivityReminder();
-        activity.hydrate();
-        activity.inspire();
-        activity.interact();
-        activity.refresh();
-        activity.revitalize();
-        activity.rest();
-        activity.breathe();
-        activity.exercise();
-        System.out.println("Which activities would you like to remove?");
+        new MoodTracker();
 
         new MotivationTool();
 
-        MoodTracker mood = new MoodTracker();
-        mood.amazing();
-        mood.content();
-        mood.meh();
-        mood.terrible();
-
-        new CuriosityBoxEntry();
+        new CuriosityEntry();
 
 
 
