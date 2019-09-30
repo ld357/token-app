@@ -3,12 +3,12 @@ package model;
 import java.util.ArrayList;
 
 
-public class CuriosityBoxEntry {
+public class CuriosityEntry {
     private String operation;
     private ArrayList<String> allthoughts;
     private String result;
 
-    public CuriosityBoxEntry() {
+    public CuriosityEntry() {
         operation = "";
         allthoughts = new ArrayList<>();
         result = "";

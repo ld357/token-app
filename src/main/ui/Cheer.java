@@ -1,7 +1,7 @@
 package ui;
 
 import model.activities.ActivityReminder;
-import model.CuriosityBoxEntry;
+import model.CuriosityEntry;
 import model.moods.MoodTracker;
 import model.quotes.MotivationTool;
 
@@ -18,7 +18,7 @@ public class Cheer {
 
         new MotivationTool();
 
-        new CuriosityBoxEntry();
+        new CuriosityEntry();
 
 
 
