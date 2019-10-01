@@ -17,8 +17,18 @@ public class Quote2 implements Quotes, Authors {
     }
 
     @Override
-    public Boolean setFavourite() {
+    public Boolean saveAuthor() {
+        return true;
+    }
+
+    @Override
+    public Boolean unSaveAuthor() {
         return false;
+    }
+
+    @Override
+    public Boolean setFavourite() {
+        return true;
     }
 
     @Override

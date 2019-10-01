@@ -18,8 +18,18 @@ public class Quote5 implements Quotes, Authors {
     }
 
     @Override
-    public Boolean setFavourite() {
+    public Boolean saveAuthor() {
+        return true;
+    }
+
+    @Override
+    public Boolean unSaveAuthor() {
         return false;
+    }
+
+    @Override
+    public Boolean setFavourite() {
+        return true;
     }
 
     @Override

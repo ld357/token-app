@@ -20,8 +20,7 @@ public class CuriosityBox {
         String operation = "";
         CuriosityEntry curiosityEntry = new CuriosityEntry();
 
-        while (true) {
-            // while is a loop, end with break
+        while (true) { // while is a loop, end with break
             System.out.println("Please select an option ([1] add thought "
                     + "[2] remove most recent thought or [3] quit):");
             operation = scanner.nextLine();
@@ -37,11 +36,12 @@ public class CuriosityBox {
             }
 
             if (operation.equals("2")) {
-                // remove most recent thought!!!! operationLog.remove()
+             //   curiosityEntry.getAllThoughts();
+             //   System.out.println("Which thought would you like to remove?");
+             //   operation = scanner.nextLine();
+              //  curiosityEntry.removeThought(operation);
                 System.out.println("Your thought has been removed.");
             }
-
-
         }
 
     }
@@ -52,21 +52,21 @@ public class CuriosityBox {
 
         System.out.println("What are you currently curious about?");
         String first = scanner.nextLine();
-        System.out.println("What else are you thinking about?");
-        String second = scanner.nextLine(); //only keeps first word in second entry? curiosityboxentry has no purpose?
         scanner.nextLine();
 
-        result = " " + first + " " + "and" + " " + second;
+        result = " " + first;
 
-        logResult(curiosityEntry, operation, first, second, result);
+        logResult(curiosityEntry, operation, first, result);
 
         return result;
 
     }
 
 
+
     private void logResult(CuriosityEntry curiosityEntry, String operation,
-                           String first, String second, String result) {
+                           String first, String result) {
+        curiosityEntry.addThought(first);
         operationLog.add(curiosityEntry);
 
     }
@@ -77,3 +77,18 @@ public class CuriosityBox {
 
     }
 }
+
+
+// with two thoughts...
+//    private void logResult(CuriosityEntry curiosityEntry, String operation,
+//                           String first, String second, String result) {
+//        operationLog.add(curiosityEntry);
+//
+//    }
+
+//  result = " " + first + " " + "and" + " " + second;
+
+// logResult(curiosityEntry, operation, first, second, result);
+
+// System.out.println("What else are you thinking about?");
+//  String second = scanner.nextLine(); //only keeps first word in second entry? curiosityboxentry has no purpose?

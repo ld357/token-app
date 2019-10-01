@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class CuriosityEntry {
     private String operation;
     private ArrayList<String> allthoughts;
+    private ArrayList<String> removedthoughts;
     private String result;
 
     public CuriosityEntry() {
@@ -19,6 +20,12 @@ public class CuriosityEntry {
         allthoughts.add(thought);
     }
 
+    public void removeThought(String thought) {
+        allthoughts.remove(thought);
+        removedthoughts.add(thought);
+    }
 
-
+    public ArrayList<String> getAllThoughts() {
+        return allthoughts;
+    }
 }

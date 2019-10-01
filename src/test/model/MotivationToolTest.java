@@ -141,5 +141,20 @@ class MotivationToolTest {
         assertEquals(0, testMotivationTool.getFavouriteList().size());
     }
 
+    @Test
+    void testFavouriteAuthor() {
+        Authors testQA1 = new Author1();
+        testQA1.saveAuthor();
+        assertTrue(true, testQA1.getAuthor());
+    }
+
+    @Test
+    void testUnFavouriteAuthor() {
+        Authors testQA2 = new Author2();
+        testQA2.saveAuthor();
+        testQA2.unSaveAuthor();
+        assertFalse(false, testQA2.getAuthor());
+    }
+
 
 }

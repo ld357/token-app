@@ -14,7 +14,7 @@ public class Quote1 implements Quotes, Authors {
 
     @Override
     public Boolean setFavourite() {
-        return false;
+        return true;
     }
 
     // getters
@@ -29,5 +29,16 @@ public class Quote1 implements Quotes, Authors {
     public String getAuthor() {
         return this.author;
     }
+
+    @Override
+    public Boolean saveAuthor() {
+        return true;
+    }
+
+    @Override
+    public Boolean unSaveAuthor() {
+        return false;
+    }
+
 
 }
