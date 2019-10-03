@@ -7,11 +7,17 @@ public class Interact implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
+    String subject;
+    String socialable;
+    Boolean requiresobject;
 
 
     public Interact() {
         this.name = "Interact";
         this.status = "today";
+        this.subject = "active";
+        this.socialable = "group";
+        this.requiresobject = false;
         System.out.println("Have you had a genuine conversation yet today?");
 
     }

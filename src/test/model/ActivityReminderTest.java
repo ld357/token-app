@@ -3,7 +3,10 @@ package model;
 import model.activities.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ui.SaveAndLoad;
 
+import java.io.EOFException;
+import java.io.IOException;
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,6 +32,7 @@ class ActivityReminderTest {
     @Test
     void testHydrate() {
         Activities testHydrate = new Hydrate();
+        Activities testRest = new Rest();
         testName = "Hydrate";
         testStatus = "today";
         assertEquals(testName, testHydrate.getActivityName());
@@ -109,7 +113,7 @@ class ActivityReminderTest {
 
 
     @Test
-    void testAddActivity() {
+    void testAddActivity() throws IOException, EOFException {
         Activities testInspire = new Inspire();
         testReminders.addActivity(testInspire);
         assertEquals(1, testReminders.getHomepageData().size());
@@ -120,7 +124,7 @@ class ActivityReminderTest {
 
 
     @Test
-    void testRemoveActivity() {
+    void testRemoveActivity() throws IOException {
         Activities testInspire = new Inspire();
         testReminders.addActivity(testInspire);
         testReminders.removeActivity(testInspire);

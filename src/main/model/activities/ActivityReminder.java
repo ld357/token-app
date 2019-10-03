@@ -1,19 +1,26 @@
 package model.activities;
 
-import java.util.HashSet;
+import ui.SaveAndLoad;
 
-public class ActivityReminder {
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class ActivityReminder implements Serializable {
     private String name;
     private String status;
-    private HashSet<Activities> selectiondata;
+    private ArrayList<Activities> selectiondata;
     private Activities actChoice;
-    private HashSet<Activities> homepagedata;
+    private ArrayList<Activities> homepagedata;
+    private static final long serialVersionUID = 1L;
+
 
     public ActivityReminder() {
         this.name = "";
         this.status = "not yet completed";
 
-        selectiondata = new HashSet<Activities>();
+        selectiondata = new ArrayList<Activities>();
         Activities breathe = new Breathe();
         Activities exercise = new Exercise();
         Activities hydrate = new Hydrate();
@@ -22,6 +29,7 @@ public class ActivityReminder {
         Activities refresh = new Refresh();
         Activities rest = new Rest();
         Activities revitalize = new Revitalize();
+
 
         selectiondata.add(breathe);
         selectiondata.add(exercise);
@@ -33,9 +41,10 @@ public class ActivityReminder {
         selectiondata.add(revitalize);
 
 
-
-        homepagedata = new HashSet<Activities>();
+        homepagedata = new ArrayList<Activities>();
         System.out.println("What would you like to remind yourself to do?");
+
+
 
     }
 
@@ -45,14 +54,13 @@ public class ActivityReminder {
         return actChoice;
     }
 
-    public HashSet<Activities> getSelectionData() {
+    public ArrayList<Activities> getSelectionData() {
         return selectiondata;
     }
 
-    public  HashSet<Activities> getHomepageData() {
+    public ArrayList<Activities> getHomepageData() {
         return homepagedata;
     }
-
 
 
     // MODIFIES: this
@@ -64,8 +72,10 @@ public class ActivityReminder {
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
     // EFFECTS: activity is added to the list if it's not
     // already in the list
-    public void addActivity(Activities actChoice) {
+    public void addActivity(Activities actChoice) throws IOException, EOFException {
         homepagedata.add(actChoice);
+        ui.SaveAndLoad.saveFile(homepagedata);
+
     }
 
     // REQUIRES: activity is an element of the list
@@ -75,11 +85,6 @@ public class ActivityReminder {
         homepagedata.remove(actChoice);
     }
 
-
-    public void saveData() {
-
-
-    }
 
 
 }

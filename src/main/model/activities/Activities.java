@@ -1,6 +1,9 @@
 package model.activities;
 
-public interface Activities {
+
+import java.io.Serializable;
+
+public interface Activities extends Serializable {
 
     void addActivity();
 

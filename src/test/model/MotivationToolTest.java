@@ -26,10 +26,8 @@ class MotivationToolTest {
     @Test
     void testQ1A() {
         Quotes testQ1 = new Quote1();
-       // testAuthor = "William Arthur Ward";
         testStatus = false;
         testQuote = "When we seek to discover the best in others,we somehow bring out the best in ourselves";
-      //  assertEquals(testAuthor, testQ1.getAuthor());
         assertEquals(testQuote, testQ1.getQuote());
         assertEquals(testStatus, testQ1.getStatus());
     }
@@ -47,10 +45,8 @@ class MotivationToolTest {
     @Test
     void testQ2A() {
         Quotes testQ2 = new Quote2();
-       // testAuthor = "John Wooden";
         testStatus = false;
         testQuote = "Make each day your masterpiece";
-        // assertEquals(testAuthor,testQ2.getAuthor());
         assertEquals(testQuote, testQ2.getQuote());
         assertEquals(testStatus, testQ2.getStatus());
     }
@@ -67,11 +63,9 @@ class MotivationToolTest {
     @Test
     void testQ3A() {
         Quotes testQ3 = new Quote3();
-        // testAuthor = "Unknown";
         testStatus = false;
         testQuote = "People overestimate what they can do in a single day." +
                 "And underestimate what they can do in their whole lives";
-        // assertEquals(testAuthor,testMotivationTool.getAuthor());
         assertEquals(testQuote, testQ3.getQuote());
         assertEquals(testStatus, testQ3.getStatus());
     }
@@ -86,11 +80,9 @@ class MotivationToolTest {
 
     @Test
     void testQ4A() {
-      //  testAuthor = "Marcus Aurelius";
         Quotes testQ4 = new Quote4();
         testStatus = false;
         testQuote = "Dwell on the beauty of life. Watch the stars,and see yourself running with them";
-      //  assertEquals(testAuthor,testMotivationTool.getAuthor());
         assertEquals(testQuote, testQ4.getQuote());
         assertEquals(testStatus, testQ4.getStatus());
     }
@@ -105,12 +97,10 @@ class MotivationToolTest {
 
     @Test
     void testQ5A() {
-        // testAuthor = "Scott Adams";
         Quotes testQ5 = new Quote5();
         testStatus = false;
         testQuote = "There’s no such things as a small act of kindness." +
                 "Every act creates a ripple with no logical end";
-       // assertEquals(testAuthor,testMotivationTool.getAuthor());
         assertEquals(testQuote, testQ5.getQuote());
         assertEquals(testStatus, testQ5.getStatus());
     }

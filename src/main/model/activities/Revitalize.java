@@ -7,11 +7,17 @@ public class Revitalize implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
+    String subject;
+    String socialable;
+    Boolean requiresobject;
 
 
     public Revitalize() {
         this.name = "Revitalize";
         this.status = "today";
+        this.subject = "not active";
+        this.socialable = "both";
+        this.requiresobject = false;
         System.out.println("Boost your energy with some fruits and snacks!");
 
     }

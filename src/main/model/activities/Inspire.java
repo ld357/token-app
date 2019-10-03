@@ -7,11 +7,17 @@ public class Inspire implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
+    String subject;
+    String socialable;
+    Boolean requiresobject;
 
 
     public Inspire() {
         this.name = "Inspire";
         this.status = "today";
+        this.subject = "not active";
+        this.socialable = "both";
+        this.requiresobject = true;
         System.out.println("Look for opportunities for growth and see where you end up!");
 
     }
