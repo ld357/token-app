@@ -38,6 +38,7 @@ public class Revitalize implements Activities {
     public  HashSet<Activities> getHomepageData() {
         return homepagedata;
     }
+
     @Override
     public void addActivity() {
 

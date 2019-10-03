@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 public class SaveAndLoad {
 
-    public static void saveFile(ArrayList <Activities> act) throws IOException {
+    public static void saveFile(ArrayList<Activities> act) throws IOException {
 
         FileOutputStream fos = new FileOutputStream(("saveInput.txt"));
         ObjectOutputStream oos = new ObjectOutputStream(fos);

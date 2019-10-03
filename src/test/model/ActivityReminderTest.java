@@ -7,6 +7,7 @@ import ui.SaveAndLoad;
 
 import java.io.EOFException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -121,8 +122,6 @@ class ActivityReminderTest {
 
 
 
-
-
     @Test
     void testRemoveActivity() throws IOException {
         Activities testInspire = new Inspire();
@@ -131,5 +130,12 @@ class ActivityReminderTest {
         assertEquals(0, testReminders.getHomepageData().size());
     }
 
+    @Test
+    void testSaveList() throws IOException, ClassNotFoundException {
+        ArrayList <Activities> testActivities = new ArrayList<Activities>();
+        SaveAndLoad.saveFile(testActivities);
+        assertEquals(testActivities, SaveAndLoad.loadFile());
+
+    }
 
 }

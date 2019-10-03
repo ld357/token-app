@@ -1,7 +1,5 @@
 package model.activities;
 
-import ui.SaveAndLoad;
-
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.Serializable;
@@ -10,9 +8,9 @@ import java.util.ArrayList;
 public class ActivityReminder implements Serializable {
     private String name;
     private String status;
-    private ArrayList<Activities> selectiondata;
+    private ArrayList<Activities> selectiond;
     private Activities actChoice;
-    private ArrayList<Activities> homepagedata;
+    private ArrayList<Activities> homepaged;
     private static final long serialVersionUID = 1L;
 
 
@@ -20,7 +18,7 @@ public class ActivityReminder implements Serializable {
         this.name = "";
         this.status = "not yet completed";
 
-        selectiondata = new ArrayList<Activities>();
+        selectiond = new ArrayList<Activities>();
         Activities breathe = new Breathe();
         Activities exercise = new Exercise();
         Activities hydrate = new Hydrate();
@@ -31,17 +29,17 @@ public class ActivityReminder implements Serializable {
         Activities revitalize = new Revitalize();
 
 
-        selectiondata.add(breathe);
-        selectiondata.add(exercise);
-        selectiondata.add(hydrate);
-        selectiondata.add(inspire);
-        selectiondata.add(interact);
-        selectiondata.add(refresh);
-        selectiondata.add(rest);
-        selectiondata.add(revitalize);
+        selectiond.add(breathe);
+        selectiond.add(exercise);
+        selectiond.add(hydrate);
+        selectiond.add(inspire);
+        selectiond.add(interact);
+        selectiond.add(refresh);
+        selectiond.add(rest);
+        selectiond.add(revitalize);
 
 
-        homepagedata = new ArrayList<Activities>();
+        homepaged = new ArrayList<Activities>();
         System.out.println("What would you like to remind yourself to do?");
 
 
@@ -55,11 +53,11 @@ public class ActivityReminder implements Serializable {
     }
 
     public ArrayList<Activities> getSelectionData() {
-        return selectiondata;
+        return selectiond;
     }
 
     public ArrayList<Activities> getHomepageData() {
-        return homepagedata;
+        return homepaged;
     }
 
 
@@ -73,8 +71,8 @@ public class ActivityReminder implements Serializable {
     // EFFECTS: activity is added to the list if it's not
     // already in the list
     public void addActivity(Activities actChoice) throws IOException, EOFException {
-        homepagedata.add(actChoice);
-        ui.SaveAndLoad.saveFile(homepagedata);
+        homepaged.add(actChoice);
+        ui.SaveAndLoad.saveFile(homepaged);
 
     }
 
@@ -82,7 +80,7 @@ public class ActivityReminder implements Serializable {
     // MODIFIES: this
     // EFFECTS: activity is removed from the list
     public void removeActivity(Activities actChoice) {
-        homepagedata.remove(actChoice);
+        homepaged.remove(actChoice);
     }
 
 
