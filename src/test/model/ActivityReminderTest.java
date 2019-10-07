@@ -3,7 +3,6 @@ package model;
 import model.activities.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ui.SaveAndLoad;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -130,12 +129,5 @@ class ActivityReminderTest {
         assertEquals(0, testReminders.getHomepageData().size());
     }
 
-    @Test
-    void testSaveList() throws IOException, ClassNotFoundException {
-        ArrayList <Activities> testActivities = new ArrayList<Activities>();
-        SaveAndLoad.saveFile(testActivities);
-        assertEquals(testActivities, SaveAndLoad.loadFile());
-
-    }
 
 }

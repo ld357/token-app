@@ -1,18 +1,26 @@
 package ui;
 
-import model.Home;
+import model.CuriosityEntry;
 import model.activities.Activities;
+import model.activities.ActivityReminder;
+import model.moods.MoodTracker;
+import model.quotes.MotivationTool;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Cheer {
     private ArrayList<Activities> aa = new ArrayList<>();
 
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args)  {
 
-        new Home();
+        MoodTracker mt = new MoodTracker();
+
+        ActivityReminder ar = new ActivityReminder();
+
+        MotivationTool mtool = new MotivationTool();
+
+        CuriosityEntry ce = new CuriosityEntry();
 
 
     }

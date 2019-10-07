@@ -70,9 +70,8 @@ public class ActivityReminder implements Serializable {
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
     // EFFECTS: activity is added to the list if it's not
     // already in the list
-    public void addActivity(Activities actChoice) throws IOException, EOFException {
+    public void addActivity(Activities actChoice) {
         homepaged.add(actChoice);
-        ui.SaveAndLoad.saveFile(homepaged);
 
     }
 
