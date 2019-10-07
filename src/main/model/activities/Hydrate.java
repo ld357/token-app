@@ -9,17 +9,11 @@ public class Hydrate implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
-    String subject;
-    String socialable;
-    Boolean requiresobject;
 
 
     public Hydrate() {
         this.name = "Hydrate";
         this.status = "today";
-        this.subject = "not active";
-        this.socialable = "individual";
-        requiresobject = false;
         System.out.println("Your body needs to be hydrated!");
     }
 

@@ -10,19 +10,12 @@ public class Exercise implements Activities {
     String subject;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
-    String socialable;
-    Boolean requiresobject;
-    private double timerequired;
-
 
 
     public Exercise() {
         this.name = "Exercise";
         this.status = "today";
         this.subject = "active";
-        this.socialable = "both";
-        this.requiresobject = true;
-        this.timerequired = 400;
         System.out.println("Getting exercise will help you relax and ease your mind!");
 
     }

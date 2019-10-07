@@ -7,16 +7,10 @@ public class Rest implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
-    String subject;
-    String socialable;
-    Boolean requiresobject;
 
     public Rest() {
         this.name = "Rest";
         this.status = "today";
-        this.subject = "not active";
-        this.socialable = "individual";
-        this.requiresobject = false;
         System.out.println("Take a break or a nap- you'll thank yourself later!");
     }
 

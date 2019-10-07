@@ -7,16 +7,10 @@ public class Refresh implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
-    String subject;
-    String socialable;
-    Boolean requiresobject;
 
     public Refresh() {
         this.name = "Refresh";
         this.status = "today";
-        this.subject = "active";
-        this.socialable = "individual";
-        this.requiresobject = false;
         System.out.println("Take a quick shower and relieve your muscles!");
 
     }

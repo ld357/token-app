@@ -9,18 +9,11 @@ public class Breathe implements Activities {
     String status;
     HashSet<Activities> selectiondata;
     HashSet<Activities> homepagedata;
-    String subject;
-    String socialable;
-    Boolean requiresobject;
-    private double timerequired;
+
 
     public Breathe() {
         this.name = "Breathe";
         this.status = "today";
-        this.subject = "not active";
-        this.socialable = "individual";
-        this.requiresobject = false;
-        this.timerequired = 400;
         System.out.println("Just take a breath of fresh air, everything will be okay!");
 
     }
