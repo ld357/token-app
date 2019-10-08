@@ -21,20 +21,6 @@ public class Meh extends AllMoods implements Moods {
         return moodNum;
     }
 
-    @Override
-    public void addMood() {
-
-    }
-
-    @Override
-    public void changeMood() {
-
-    }
-
-    @Override
-    public void removeMood() {
-
-    }
 
     @Override
     public void soundMood() {

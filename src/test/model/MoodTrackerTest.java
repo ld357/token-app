@@ -14,6 +14,7 @@ class MoodTrackerTest {
     String testName;
     int testNum;
     Moods testMoodChoice;
+    String testSoundMood;
     HashSet<Moods> testHomepageData;
     HashSet<Moods> testSelectionData;
 
@@ -26,13 +27,18 @@ class MoodTrackerTest {
     @Test
     void testAmazing() {
         Moods testAmazing = new Amazing();
+        Amazing testAmazing2 = new Amazing();
         testNum = 5;
         testName = "amazing";
         assertEquals(testNum, testAmazing.getMoodNum());
         assertEquals(testName, testAmazing.getMoodName());
     }
 
-
+    @Test
+    void testSetting() {
+        Amazing testAmazing = new Amazing();
+        testNum = 5;
+    }
 
     @Test
     void testContent() {
@@ -86,4 +92,13 @@ class MoodTrackerTest {
         assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testContent));
     }
 
+
+    @Test
+    void testSoundMood() {
+        Amazing testAmazing = new Amazing();
+        testAmazing.soundMood();
+        testSoundMood = "Yayyy!";
+       // assertEquals(testSoundMood, testAmazing.soundMood());
+
+    }
 }

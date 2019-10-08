@@ -20,16 +20,6 @@ public class Amazing extends AllMoods implements Moods {
         return moodNum;
     }
 
-    // setters
-    public void setMoodNum(int moodNum) {
-        this.moodNum = moodNum;
-
-    }
-
-    public void setMoodName(String moodName) {
-        this.moodName = moodName;
-    }
-
 
     @Override
     public void soundMood() {
@@ -39,19 +29,6 @@ public class Amazing extends AllMoods implements Moods {
     @Override
     public void announceMood() {
         System.out.println("I am feeling amazing!");
-    }
-
-    @Override
-    public void addMood() {
-    }
-
-
-    @Override
-    public void changeMood() {
-    }
-
-    @Override
-    public void removeMood() {
     }
 
 }

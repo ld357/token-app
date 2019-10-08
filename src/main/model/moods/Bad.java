@@ -21,20 +21,6 @@ public class Bad extends AllMoods implements Moods {
     }
 
 
-    @Override
-    public void addMood() {
-
-    }
-
-    @Override
-    public void changeMood() {
-
-    }
-
-    @Override
-    public void removeMood() {
-
-    }
 
     @Override
     public void soundMood() {
