@@ -44,10 +44,4 @@ public class Hydrate implements Activities {
 
     }
 
-
-    // REQUIRES: method has not been called yet today
-    // MODIFIES: this
-    // EFFECTS: creates new "hydrate" activity, adds to list,
-    // calls check-in and prints out statement
-
 }
