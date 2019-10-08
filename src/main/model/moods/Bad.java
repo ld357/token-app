@@ -3,6 +3,8 @@ package model.moods;
 public class Bad extends AllMoods implements Moods {
     int moodNum;
     String moodName;
+    String soundMood;
+    String announcement;
 
     public Bad() {
         super("bad", 2);
@@ -21,20 +23,24 @@ public class Bad extends AllMoods implements Moods {
     }
 
 
+    // setters
+
+    public String getSoundMood() {
+        return soundMood;
+    }
+
+    public String getAnnouncement() {
+        return announcement;
+    }
 
     @Override
     public void soundMood() {
-        System.out.println("Ughhh!");
+        this.soundMood = "Ughhh!.";
     }
 
     @Override
     public void announceMood() {
-        System.out.println("I am feeling bad!");
+        this.announcement = "I am feeling bad!";
 
     }
-
-
-    // MODIFIES: this
-    // EFFECTS: sets data for bad mood
-
 }

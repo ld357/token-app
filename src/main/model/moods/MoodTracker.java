@@ -37,9 +37,6 @@ public class MoodTracker {
         return homepagedata;
     }
 
-    public HashSet<Moods> getSD() {
-        return selectiondata;
-    }
 
 
 
@@ -57,10 +54,6 @@ public class MoodTracker {
         this.moodChoice = moodChoice;
     }
 
-
-    public void removeMood(Moods moodChoice) {
-        homepagedata.remove(moodChoice);
-    }
 
 
 

@@ -15,6 +15,7 @@ class MoodTrackerTest {
     int testNum;
     Moods testMoodChoice;
     String testSoundMood;
+    String testAnnounceMood;
     HashSet<Moods> testHomepageData;
     HashSet<Moods> testSelectionData;
 
@@ -94,11 +95,87 @@ class MoodTrackerTest {
 
 
     @Test
-    void testSoundMood() {
+    void testSoundAMood() {
         Amazing testAmazing = new Amazing();
         testAmazing.soundMood();
-        testSoundMood = "Yayyy!";
-       // assertEquals(testSoundMood, testAmazing.soundMood());
+        testSoundMood = "Yaay!";
+        assertEquals(testSoundMood, testAmazing.getSoundMood());
 
+    }
+
+    @Test
+    void testAnnounceAMood() {
+        Amazing testAmazing = new Amazing();
+        testAmazing.announceMood();
+        testAnnounceMood = "I am feeling amazing!";
+        assertEquals(testAnnounceMood, testAmazing.getAnnouncement());
+    }
+
+    @Test
+    void testSoundBMood() {
+        Bad testBad = new Bad();
+        testBad.soundMood();
+        testSoundMood = "Ughhh!.";
+        assertEquals(testSoundMood, testBad.getSoundMood());
+
+    }
+
+    @Test
+    void testAnnounceBMood() {
+        Bad testBad = new Bad();
+        testBad.announceMood();
+        testAnnounceMood = "I am feeling bad!";
+        assertEquals(testAnnounceMood, testBad.getAnnouncement());
+    }
+
+    @Test
+    void testSoundCMood() {
+        Content testContent = new Content();
+        testContent.soundMood();
+        testSoundMood = "Hmmmm!";
+        assertEquals(testSoundMood, testContent.getSoundMood());
+
+    }
+
+    @Test
+    void testAnnounceCMood() {
+        Content testContent = new Content();
+        testContent.announceMood();
+        testAnnounceMood = "I am feeling content!";
+        assertEquals(testAnnounceMood, testContent.getAnnouncement());
+    }
+
+    @Test
+    void testSoundMMood() {
+        Meh testMeh = new Meh();
+        testMeh.soundMood();
+        testSoundMood = "Ehhhhh...";
+        assertEquals(testSoundMood, testMeh.getSoundMood());
+
+    }
+
+    @Test
+    void testAnnounceMMood() {
+        Meh testMeh = new Meh();
+        testMeh.announceMood();
+        testAnnounceMood = "I am feeling meh!";
+        assertEquals(testAnnounceMood, testMeh.getAnnouncement());
+    }
+
+    @Test
+    void testSoundTMood() {
+        Terrible testTerrible = new Terrible();
+        testTerrible.soundMood();
+        testSoundMood = "DARNN...";
+        assertEquals(testSoundMood, testTerrible.getSoundMood());
+
+    }
+
+    @Test
+    void testAnnounceTMood() {
+        Terrible testTerrible = new Terrible();
+        testTerrible.announceMood();
+        testAnnounceMood = "I am feeling terrible!";
+        assertEquals(testAnnounceMood, testTerrible.getAnnouncement());
     }
 }

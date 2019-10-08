@@ -22,7 +22,7 @@ public class CuriosityBox {
 
         while (true) { // while is a loop, end with break
             System.out.println("Please select an option ([1] add thought "
-                    + "[2] remove most recent thought or [3] quit):");
+                    + "[2] remove thought or [3] quit):");
             operation = scanner.nextLine();
             System.out.println("You wrote: " + operation);
 
@@ -43,7 +43,7 @@ public class CuriosityBox {
                 System.out.println("Your thought has been removed.");
             }
 
-//            if (operation.equals("3")) {
+//            if (operation.equals("2")) {
 //                System.out.println("How are you feeling?");
 //                operation = scanner.nextLine();
 //                if (operation.equals("Amazing")) {

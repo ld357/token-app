@@ -2,7 +2,6 @@ package model.moods;
 
 public abstract class AllMoods implements Moods {
     protected String colour;
-    protected String valence;
     protected String moodName;
     protected int moodNum;
 
