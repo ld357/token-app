@@ -22,7 +22,7 @@ public class CuriosityBox {
 
         while (true) { // while is a loop, end with break
             System.out.println("Please select an option ([1] add thought "
-                    + "[2] remove most recent thought or [3] enter mood or [4] quit):");
+                    + "[2] remove most recent thought or [3] quit):");
             operation = scanner.nextLine();
             System.out.println("You wrote: " + operation);
 
@@ -35,28 +35,27 @@ public class CuriosityBox {
                 System.out.println("you wrote:" + result);
             }
 
-            if (operation.equals("2")) {
-             //   curiosityEntry.getAllThoughts();
-             //   System.out.println("Which thought would you like to remove?");
-             //   operation = scanner.nextLine();
-              //  curiosityEntry.removeThought(operation);
+            if (operation.equals("3")) {
+                //   curiosityEntry.getAllThoughts();
+                //   System.out.println("Which thought would you like to remove?");
+                //   operation = scanner.nextLine();
+                //  curiosityEntry.removeThought(operation);
                 System.out.println("Your thought has been removed.");
             }
 
-            if (operation.equals("3")) {
-                System.out.println("How are you feeling?");
-                operation = scanner.nextLine();
-                if (operation.equals("Amazing")) {
-                    Amazing amazing = new Amazing();
-                    amazing.announceMood();
-                    amazing.soundMood();
+//            if (operation.equals("3")) {
+//                System.out.println("How are you feeling?");
+//                operation = scanner.nextLine();
+//                if (operation.equals("Amazing")) {
+//                    Amazing amazing = new Amazing();
+//                    amazing.announceMood();
+//                    amazing.soundMood();
+//
+//                }
 
-                }
-
-            }
         }
-
     }
+
 
 
     private String processOperation(CuriosityEntry curiosityEntry, String operation) {
