@@ -1,24 +1,21 @@
-package model.activities;
+package ui.activities;
 
-import java.io.EOFException;
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ActivityReminder implements Serializable {
     private String name;
     private String status;
-    private ArrayList<Activities> selectiond;
+    private ArrayList<Activities> selectionD;
     private Activities actChoice;
-    private ArrayList<Activities> homepaged;
-    private static final long serialVersionUID = 1L;
+    private ArrayList<Activities> homepageD;
 
 
     public ActivityReminder() {
         this.name = "";
         this.status = "not yet completed";
 
-        selectiond = new ArrayList<Activities>();
+        selectionD = new ArrayList<>();
         Activities breathe = new Breathe();
         Activities exercise = new Exercise();
         Activities hydrate = new Hydrate();
@@ -29,17 +26,17 @@ public class ActivityReminder implements Serializable {
         Activities revitalize = new Revitalize();
 
 
-        selectiond.add(breathe);
-        selectiond.add(exercise);
-        selectiond.add(hydrate);
-        selectiond.add(inspire);
-        selectiond.add(interact);
-        selectiond.add(refresh);
-        selectiond.add(rest);
-        selectiond.add(revitalize);
+        selectionD.add(breathe);
+        selectionD.add(exercise);
+        selectionD.add(hydrate);
+        selectionD.add(inspire);
+        selectionD.add(interact);
+        selectionD.add(refresh);
+        selectionD.add(rest);
+        selectionD.add(revitalize);
 
 
-        homepaged = new ArrayList<Activities>();
+        homepageD = new ArrayList<Activities>();
         System.out.println("What would you like to remind yourself to do?");
 
 
@@ -53,11 +50,11 @@ public class ActivityReminder implements Serializable {
     }
 
     public ArrayList<Activities> getSelectionData() {
-        return selectiond;
+        return selectionD;
     }
 
     public ArrayList<Activities> getHomepageData() {
-        return homepaged;
+        return homepageD;
     }
 
 
@@ -71,7 +68,7 @@ public class ActivityReminder implements Serializable {
     // EFFECTS: activity is added to the list if it's not
     // already in the list
     public void addActivity(Activities actChoice) {
-        homepaged.add(actChoice);
+        homepageD.add(actChoice);
 
     }
 
@@ -79,7 +76,7 @@ public class ActivityReminder implements Serializable {
     // MODIFIES: this
     // EFFECTS: activity is removed from the list
     public void removeActivity(Activities actChoice) {
-        homepaged.remove(actChoice);
+        homepageD.remove(actChoice);
     }
 
 

@@ -1,21 +1,20 @@
-package model.activities;
+package ui.activities;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
-public class Interact implements Activities {
+public class Revitalize implements Activities {
     String name;
     String status;
-    HashSet<Activities> selectiondata;
-    HashSet<Activities> homepagedata;
+    ArrayList<Activities> selectiondata;
+    ArrayList<Activities> homepagedata;
 
 
-    public Interact() {
-        this.name = "Interact";
+    public Revitalize() {
+        this.name = "Revitalize";
         this.status = "today";
-        System.out.println("Have you had a genuine conversation yet today?");
+        System.out.println("Boost your energy with some fruits and snacks!");
 
     }
-
 
     // getters
     public String getActivityName() {
@@ -26,11 +25,11 @@ public class Interact implements Activities {
         return status;
     }
 
-    public HashSet<Activities> getSelectionData() {
+    public ArrayList<Activities> getSelectionData() {
         return selectiondata;
     }
 
-    public  HashSet<Activities> getHomepageData() {
+    public ArrayList<Activities> getHomepageData() {
         return homepagedata;
     }
 
@@ -46,7 +45,6 @@ public class Interact implements Activities {
 
     // REQUIRES: method has not been called yet today
     // MODIFIES: this
-    // EFFECTS: creates new "interact" activity, adds to list,
+    // EFFECTS: creates new "revitalize" activity, adds to list,
     // calls check-in and prints out statement
-
 }

@@ -1,17 +1,18 @@
-package model.activities;
+package ui.activities;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
-public class Refresh implements Activities {
+public class Inspire implements Activities {
     String name;
     String status;
-    HashSet<Activities> selectiondata;
-    HashSet<Activities> homepagedata;
+    ArrayList<Activities> selectiondata;
+    ArrayList<Activities> homepagedata;
 
-    public Refresh() {
-        this.name = "Refresh";
+
+    public Inspire() {
+        this.name = "Inspire";
         this.status = "today";
-        System.out.println("Take a quick shower and relieve your muscles!");
+        System.out.println("Look for opportunities for growth and see where you end up!");
 
     }
 
@@ -24,11 +25,11 @@ public class Refresh implements Activities {
         return status;
     }
 
-    public HashSet<Activities> getSelectionData() {
+    public ArrayList<Activities> getSelectionData() {
         return selectiondata;
     }
 
-    public  HashSet<Activities> getHomepageData() {
+    public ArrayList<Activities> getHomepageData() {
         return homepagedata;
     }
 
@@ -45,7 +46,7 @@ public class Refresh implements Activities {
 
     // REQUIRES: method has not been called yet today
     // MODIFIES: this
-    // EFFECTS: creates new "refresh" activity, adds to list,
+    // EFFECTS: creates new "inspire" activity, adds to list,
     // calls check-in and prints out statement
 
 }

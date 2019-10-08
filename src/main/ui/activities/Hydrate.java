@@ -1,14 +1,14 @@
-package model.activities;
+package ui.activities;
 
-import model.activities.Activities;
+import ui.activities.Activities;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
 public class Hydrate implements Activities {
     String name;
     String status;
-    HashSet<Activities> selectiondata;
-    HashSet<Activities> homepagedata;
+    ArrayList<Activities> selectiondata;
+    ArrayList<Activities> homepagedata;
 
 
     public Hydrate() {
@@ -26,11 +26,11 @@ public class Hydrate implements Activities {
         return status;
     }
 
-    public HashSet<Activities> getSelectionData() {
+    public ArrayList<Activities> getSelectionData() {
         return selectiondata;
     }
 
-    public  HashSet<Activities> getHomepageData() {
+    public ArrayList<Activities> getHomepageData() {
         return homepagedata;
     }
 

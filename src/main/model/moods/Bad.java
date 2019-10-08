@@ -1,12 +1,14 @@
 package model.moods;
 
-public class Bad implements Moods {
+public class Bad extends AllMoods implements Moods {
     int moodNum;
     String moodName;
 
     public Bad() {
-        this.moodNum = 2;
+        super("bad", 2);
         this.moodName = "bad";
+        this.moodNum = 2;
+        this.colourMood("medium blue");
     }
 
     // getters
@@ -34,6 +36,16 @@ public class Bad implements Moods {
 
     }
 
+    @Override
+    public void soundMood() {
+        System.out.println("Ughhh!");
+    }
+
+    @Override
+    public void announceMood() {
+        System.out.println("I am feeling bad!");
+
+    }
 
 
     // MODIFIES: this

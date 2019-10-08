@@ -1,20 +1,21 @@
-package model.activities;
+package ui.activities;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
-public class Inspire implements Activities {
+public class Interact implements Activities {
     String name;
     String status;
-    HashSet<Activities> selectiondata;
-    HashSet<Activities> homepagedata;
+    ArrayList<Activities> selectiondata;
+    ArrayList<Activities> homepagedata;
 
 
-    public Inspire() {
-        this.name = "Inspire";
+    public Interact() {
+        this.name = "Interact";
         this.status = "today";
-        System.out.println("Look for opportunities for growth and see where you end up!");
+        System.out.println("Have you had a genuine conversation yet today?");
 
     }
+
 
     // getters
     public String getActivityName() {
@@ -25,14 +26,13 @@ public class Inspire implements Activities {
         return status;
     }
 
-    public HashSet<Activities> getSelectionData() {
+    public ArrayList<Activities> getSelectionData() {
         return selectiondata;
     }
 
-    public  HashSet<Activities> getHomepageData() {
+    public ArrayList<Activities> getHomepageData() {
         return homepagedata;
     }
-
 
     @Override
     public void addActivity() {
@@ -46,7 +46,7 @@ public class Inspire implements Activities {
 
     // REQUIRES: method has not been called yet today
     // MODIFIES: this
-    // EFFECTS: creates new "inspire" activity, adds to list,
+    // EFFECTS: creates new "interact" activity, adds to list,
     // calls check-in and prints out statement
 
 }

@@ -1,4 +1,4 @@
-package model.quotes;
+package ui.quotes;
 
 public class Author3 implements Authors {
     String author;

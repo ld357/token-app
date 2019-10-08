@@ -1,4 +1,4 @@
-package model.quotes;
+package ui.quotes;
 
 public interface Quotes {
 

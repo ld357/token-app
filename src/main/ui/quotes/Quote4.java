@@ -1,14 +1,14 @@
-package model.quotes;
+package ui.quotes;
 
-public class Quote5 implements Quotes, Authors {
+public class Quote4 implements Quotes, Authors {
     String quote;
     Boolean status;
     String author;
 
-    public Quote5() {
-        this.quote = "There’s no such things as a small act of kindness."
-                + "Every act creates a ripple with no logical end";
-        this.author = "Scott Adams";
+    public Quote4() {
+        this.quote = "Dwell on the beauty of life. Watch the stars,"
+                + "and see yourself running with them";
+        this.author = "Marcus Aurelius";
         this.status = false;
     }
 

@@ -1,11 +1,11 @@
-package model.quotes;
+package ui.quotes;
 
-public class Author4 implements Authors {
+public class Author2 implements Authors {
     String author;
     Boolean favouriteAuthorStatus;
 
-    public Author4() {
-        this.author = "Marcus Aurelius";
+    public Author2() {
+        this.author = "John Wooden";
         this.favouriteAuthorStatus = false;
     }
 

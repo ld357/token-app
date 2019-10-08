@@ -1,4 +1,4 @@
-package model.activities;
+package ui.activities;
 
 
 import java.io.Serializable;

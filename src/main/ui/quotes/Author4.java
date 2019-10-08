@@ -1,14 +1,13 @@
-package model.quotes;
+package ui.quotes;
 
-public class Author5 implements Authors {
+public class Author4 implements Authors {
     String author;
     Boolean favouriteAuthorStatus;
 
-    public Author5() {
-        this.author = "Scott Adams";
+    public Author4() {
+        this.author = "Marcus Aurelius";
         this.favouriteAuthorStatus = false;
     }
-
 
     @Override
     public String getAuthor() {

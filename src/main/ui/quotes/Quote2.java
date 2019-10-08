@@ -1,17 +1,15 @@
-package model.quotes;
+package ui.quotes;
 
-public class Quote3 implements Quotes, Authors {
+public class Quote2 implements Quotes, Authors {
     String quote;
     Boolean status;
     String author;
 
-    public Quote3() {
-        this.quote = "People overestimate what they can do in a single day."
-                + "And underestimate what they can do in their whole lives";
-        this.author = "Unknown";
+    public Quote2() {
+        this.quote = "Make each day your masterpiece";
+        this.author = "John Wooden";
         this.status = false;
     }
-
 
     @Override
     public String getAuthor() {
@@ -43,4 +41,3 @@ public class Quote3 implements Quotes, Authors {
         return this.status;
     }
 }
-
