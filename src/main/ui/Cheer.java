@@ -21,6 +21,8 @@ public class Cheer {
 
         CuriosityEntry ce = new CuriosityEntry();
 
+        MoodSelector ms = new MoodSelector();
+
 
     }
 

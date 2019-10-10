@@ -36,11 +36,13 @@ public class Content extends AllMoods implements Moods {
     }
 
     @Override
+    // EFFECTS: sets soundMood
     public void soundMood() {
         this.soundMood = "Hmmmm!";
     }
 
     @Override
+    // EFFECTS: sets announceMood
     public void announceMood() {
         this.announcement = "I am feeling content!";
 

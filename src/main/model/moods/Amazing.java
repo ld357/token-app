@@ -26,17 +26,20 @@ public class Amazing extends AllMoods implements Moods {
         return soundMood;
     }
 
+
     public String getAnnouncement() {
         return announcement;
     }
 
     @Override
+    // EFFECTS: sets soundMood
     public void soundMood() {
         this.soundMood = "Yaay!";
 
     }
 
     @Override
+    // EFFECTS: sets announceMood
     public void announceMood() {
         this.announcement = "I am feeling amazing!";
     }

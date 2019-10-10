@@ -10,7 +10,7 @@ public class MoodSelector {
     public ArrayList<MoodEntry> operationLog;
     private Scanner scanner;
 
-    private MoodSelector() {
+    MoodSelector() {
         operationLog = new ArrayList<MoodEntry>();
         scanner = new Scanner(System.in);
         processOperations();
@@ -48,7 +48,7 @@ public class MoodSelector {
     private String processOperation(MoodEntry moodEntry, String operation) {
         String result = "";
 
-        System.out.println("What are you currently curious about?");
+        System.out.println("How are you feeling?");
         String first = scanner.nextLine();
         scanner.nextLine();
 
