@@ -19,7 +19,7 @@ public class MoodGUI {
             // statusLabel.setText("System error: can't change to " + e.getMessage());
         } finally {
             // drawMood();
-            System.out.println("Your mood has been changed!");
+            System.out.println("That is your mood!");
         }
 
     }
@@ -33,7 +33,7 @@ public class MoodGUI {
             // statusLabel.setText("System error: can't remove " + e.getMessage());
         } finally {
             // drawMood();
-            System.out.println("The mood was removed!");
+            System.out.println("That is your mood!!");
         }
     }
 
