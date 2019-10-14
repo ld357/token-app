@@ -1,5 +1,6 @@
 package model;
 
+import model.exceptions.MoodWasNotAdded;
 import model.exceptions.NoMoodChoiceSelected;
 
 import java.util.HashSet;
@@ -53,8 +54,15 @@ public class MoodTracker {
         homepagedata.add(moodChoice);
     }
 
+    // MODIFIES: this
+    // EFFECTS: mood is removed from list
+    public void removeMood(Moods moodChoice) throws MoodWasNotAdded {
+        if (!homepagedata.contains(moodChoice)) {
+            throw new MoodWasNotAdded();
+        }
+        homepagedata.remove(moodChoice);
+    }
 
-    // REQUIRES: a mood has already been chosen
     // MODIFIES: this
     // EFFECTS: changes mood to different mood
     public void changeMood(Moods moodChoice) throws NoMoodChoiceSelected {

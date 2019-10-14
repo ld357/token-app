@@ -1,5 +1,6 @@
 package model;
 
+import model.exceptions.MoodWasNotAdded;
 import model.exceptions.NoMoodChoiceSelected;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -82,6 +83,27 @@ class MoodTrackerTest {
         Moods testAmazing = new Amazing();
         testMoodTracker.addMood(testAmazing);
         assertEquals(1, testMoodTracker.getHD().size());
+    }
+
+    @Test
+    void testRemoveMoodWithNoException() {
+        try {
+        Moods testAmazing = new Amazing();
+        testMoodTracker.addMood(testAmazing);
+        testMoodTracker.removeMood(testAmazing); }
+        catch (MoodWasNotAdded ee) {
+            fail("This should not have been caught!");
+        }
+
+    }
+
+    @Test
+    void testRemoveMoodWithException() {
+        try {
+            testMoodTracker.removeMood(testAmazing);
+            fail("This should not have been executed!");
+        }
+        catch (MoodWasNotAdded ee) {}
     }
 
     @Test
