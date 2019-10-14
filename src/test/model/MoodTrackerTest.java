@@ -1,6 +1,6 @@
 package model;
 
-import model.moods.*;
+import model.exceptions.NoMoodChoiceSelected;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -84,14 +84,45 @@ class MoodTrackerTest {
         assertEquals(1, testMoodTracker.getHD().size());
     }
 
+    @Test
+    void testSetMood() {
+        Moods testAmazing = new Amazing();
+        testMoodTracker.setMoodChoice(testAmazing);
+        testMoodChoice = testAmazing;
+        assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testAmazing));
+    }
 
     @Test
-    void testChangeMood() {
+    void testChangeMoodNoThrowException() {
         Moods testContent = new Content();
-        testMoodTracker.changeMood(testContent);
+        testMoodTracker.setMoodChoice(testContent);
+        Moods testAmazing = new Amazing();
+        try {
+            testMoodTracker.changeMood(testAmazing);
+        } catch (NoMoodChoiceSelected noMoodChoiceSelected) {
+           fail("No exception should be thrown!");
+        }
+        finally {
+            System.out.println("Perfect! It runs");
+        }
+        testMoodChoice = testAmazing;
+        assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testAmazing));
+    }
+
+    @Test
+    void testChangeMoodThrowsException() {
+        Moods testContent = new Content();
+        try {
+            testMoodTracker.changeMood(testContent);
+            fail("This should thrown an exception!");
+        } catch (NoMoodChoiceSelected noMoodChoiceSelected) {
+            // noMoodChoiceSelected.printStackTrace();
+        }
+
         testMoodChoice = testContent;
         assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testContent));
     }
+
 
 
     @Test

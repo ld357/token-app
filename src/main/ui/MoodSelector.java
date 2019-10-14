@@ -1,7 +1,7 @@
 package ui;
 
-import model.moods.Amazing;
-import model.moods.Bad;
+import model.Amazing;
+import model.Bad;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,8 +10,8 @@ public class MoodSelector {
     public ArrayList<MoodEntry> operationLog;
     private Scanner scanner;
 
-    MoodSelector() {
-        operationLog = new ArrayList<MoodEntry>();
+    private MoodSelector() {
+        operationLog = new ArrayList<>();
         scanner = new Scanner(System.in);
         processOperations();
 
@@ -71,7 +71,7 @@ public class MoodSelector {
 
 
     public static void main(String[] args) {
-        new MoodEntry();
+        new MoodSelector();
 
     }
 }

@@ -1,4 +1,4 @@
-package model.moods;
+package model;
 
 public interface Moods {
 

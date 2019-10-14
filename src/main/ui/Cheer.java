@@ -2,10 +2,9 @@ package ui;
 
 // import ui.activities.Activities;
 // import ui.activities.ActivityReminder;
-import model.moods.MoodTracker;
+import model.MoodTracker;
 // import ui.quotes.MotivationTool;
 
-import java.util.ArrayList;
 
 public class Cheer {
     // private ArrayList<Activities> aa = new ArrayList<>();
@@ -21,7 +20,6 @@ public class Cheer {
 
         CuriosityEntry ce = new CuriosityEntry();
 
-        MoodSelector ms = new MoodSelector();
 
 
     }

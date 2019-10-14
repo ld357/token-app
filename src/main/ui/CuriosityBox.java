@@ -1,7 +1,5 @@
 package ui;
 
-import model.moods.Amazing;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

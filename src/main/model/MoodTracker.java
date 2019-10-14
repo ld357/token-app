@@ -1,4 +1,6 @@
-package model.moods;
+package model;
+
+import model.exceptions.NoMoodChoiceSelected;
 
 import java.util.HashSet;
 
@@ -10,6 +12,7 @@ public class MoodTracker {
 
     public MoodTracker() {
         selectiondata = new HashSet<Moods>();
+        this.moodChoice = null;
         Moods amazing = new Amazing();
         Moods content = new Content();
         Moods meh = new Meh();
@@ -37,7 +40,10 @@ public class MoodTracker {
         return homepagedata;
     }
 
+    public void setMoodChoice(Moods moodChoice) {
+        this.moodChoice = moodChoice;
 
+    }
 
 
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
@@ -47,10 +53,15 @@ public class MoodTracker {
         homepagedata.add(moodChoice);
     }
 
+
     // REQUIRES: a mood has already been chosen
     // MODIFIES: this
     // EFFECTS: changes mood to different mood
-    public void changeMood(Moods moodChoice) {
+    public void changeMood(Moods moodChoice) throws NoMoodChoiceSelected {
+        if (this.moodChoice == null) {
+            throw new NoMoodChoiceSelected();
+        }
+
         this.moodChoice = moodChoice;
     }
 

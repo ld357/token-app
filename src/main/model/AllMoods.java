@@ -1,4 +1,4 @@
-package model.moods;
+package model;
 
 public abstract class AllMoods implements Moods {
     protected String colour;
