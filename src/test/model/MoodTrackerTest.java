@@ -124,9 +124,6 @@ class MoodTrackerTest {
         } catch (NoMoodChoiceSelected noMoodChoiceSelected) {
            fail("No exception should be thrown!");
         }
-        finally {
-            System.out.println("Perfect! It runs");
-        }
         testMoodChoice = testAmazing;
         assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testAmazing));
     }
