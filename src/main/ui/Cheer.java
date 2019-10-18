@@ -2,7 +2,7 @@ package ui;
 
 // import ui.activities.Activities;
 // import ui.activities.ActivityReminder;
-import model.MoodTracker;
+import model.moods.MoodTracker;
 // import ui.quotes.MotivationTool;
 
 

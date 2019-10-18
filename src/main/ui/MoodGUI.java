@@ -1,7 +1,7 @@
 package ui;
 
-import model.MoodTracker;
-import model.Moods;
+import model.moods.MoodTracker;
+import model.moods.Moods;
 import model.exceptions.MoodWasNotAdded;
 import model.exceptions.NoMoodChoiceSelected;
 

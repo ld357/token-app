@@ -1,4 +1,4 @@
-package model;
+package model.moods;
 
 import model.exceptions.MoodWasNotAdded;
 import model.exceptions.NoMoodChoiceSelected;

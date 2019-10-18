@@ -1,17 +1,16 @@
-package model;
+package model.moods;
 
-public class Meh extends AllMoods implements Moods {
+public class Amazing extends AllMoods implements Moods {
     int moodNum;
     String moodName;
     String soundMood;
     String announcement;
 
-    public Meh() {
-        super("meh", 3);
-        this.moodName = "meh";
-        this.moodNum = 3;
-        this.colourMood("green");
-
+    public Amazing() {
+        super("amazing", 5);
+        this.moodName = "amazing";
+        this.moodNum = 5;
+        this.colourMood("yellow");
     }
 
     // getters
@@ -23,11 +22,10 @@ public class Meh extends AllMoods implements Moods {
         return moodNum;
     }
 
-    // setters
-
     public String getSoundMood() {
         return soundMood;
     }
+
 
     public String getAnnouncement() {
         return announcement;
@@ -36,15 +34,14 @@ public class Meh extends AllMoods implements Moods {
     @Override
     // EFFECTS: sets soundMood
     public void soundMood() {
-        this.soundMood = "Ehhhhh...";
+        this.soundMood = "Yaay!";
+
     }
 
     @Override
     // EFFECTS: sets announceMood
     public void announceMood() {
-        this.announcement = "I am feeling meh!";
-
+        this.announcement = "I am feeling amazing!";
     }
-    // MODIFIES: this
-    // EFFECTS: sets data for meh mood
+
 }

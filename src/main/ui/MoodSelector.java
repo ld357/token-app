@@ -1,7 +1,7 @@
 package ui;
 
-import model.Amazing;
-import model.Bad;
+import model.moods.Amazing;
+import model.moods.Bad;
 
 import java.util.ArrayList;
 import java.util.Scanner;
