@@ -29,8 +29,17 @@ class ActivityReminderTest {
 
     @Test
     void testProvideTags() {
+
+        testActivityReminder.addCategory(testCategory1);
+        testActivityReminder.addCategory(testCategory2);
+
+        testActivityReminder.addTag(testCategory1,"#fit");
+        testActivityReminder.addTag(testCategory1,"#physicalgrowth");
+
         testActivityReminder.provideTags(testCategory1);
 
+        System.out.println(testActivityReminder.categoryTags.keySet());
+        System.out.println(testActivityReminder.categoryTags.values());
     }
 
 
@@ -54,6 +63,8 @@ class ActivityReminderTest {
     void testAddTag() {
         testActivityReminder.addTag(testCategory1,"#fit");
         testActivityReminder.addTag(testCategory1,"#physicalgrowth");
+
+        System.out.println(testActivityReminder.categoryTags.values());
 
     }
 
