@@ -3,6 +3,10 @@ package model.activities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ActivityReminderTest {
@@ -16,12 +20,14 @@ class ActivityReminderTest {
         testActivityReminder = new ActivityReminder();
         testCategory1 = new Category("High Active",5,false);
         testCategory2 = new Category("Medium Active",3,false);
+
     }
 
 
     @Test
     void testProvideTags() {
         testActivityReminder.provideTags(testCategory1);
+
     }
 
 
@@ -38,5 +44,6 @@ class ActivityReminderTest {
         testActivityReminder.addTag(testCategory1,"#physicalgrowth");
 
     }
-}
 
+
+}
