@@ -1,5 +1,6 @@
 package model.activities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
@@ -12,6 +13,7 @@ public class Category {
         this.name = name;
         this.activeLevel = activeLevel;
         this.needsPeople = needsPeople;
+        categories = new ArrayList<>();
     }
 
     // getters
