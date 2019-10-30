@@ -13,7 +13,7 @@ public class ActivityReminder {
     private ArrayList<Activities> selectionD;
     private Activities actChoice;
     private ArrayList<Activities> homepageD;
-    private Map<Category, ArrayList<String>> categoryTags;
+    public Map<Category, ArrayList<String>> categoryTags;
 
 
     public ActivityReminder() {
@@ -64,6 +64,5 @@ public class ActivityReminder {
         ArrayList<String> tags = categoryTags.get(c);
         tags.add(tag);
     }
-
 
 }

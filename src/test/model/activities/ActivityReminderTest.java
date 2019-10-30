@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
+import static org.junit.jupiter.api.Assertions.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ActivityReminderTest {
@@ -35,6 +38,15 @@ class ActivityReminderTest {
     void testAddCategory() {
         testActivityReminder.addCategory(testCategory1);
         testActivityReminder.addCategory(testCategory2);
+
+        testActivityReminder.addTag(testCategory1,"#fit");
+        testActivityReminder.addTag(testCategory1,"#physicalgrowth");
+
+        assertTrue(testActivityReminder.categoryTags.containsKey(testCategory1));
+        assertTrue(testActivityReminder.categoryTags.containsKey(testCategory2));
+
+        testActivityReminder.categoryTags.values();
+
     }
 
 

@@ -36,4 +36,11 @@ class CategoryTest {
         assertTrue(testCategory2.hashCode() == testCategory3.hashCode());
     }
 
+    @Test
+    void testHashCodeDoesNotEqual() {
+        assertFalse(testCategory1.equals(testCategory2));
+        assertFalse(testCategory2.equals(testCategory1));
+        assertFalse(testCategory1.hashCode() == testCategory2.hashCode());
+    }
+
 }
