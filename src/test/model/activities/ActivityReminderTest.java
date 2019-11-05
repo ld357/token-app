@@ -10,12 +10,11 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ActivityReminderTest {
     ActivityReminder testActivityReminder;
     Category testCategory1;
     Category testCategory2;
+    Activities Breathe;
 
 
     @BeforeEach
@@ -38,8 +37,8 @@ class ActivityReminderTest {
 
         testActivityReminder.provideTags(testCategory1);
 
-        System.out.println(testActivityReminder.categoryTags.keySet());
-        System.out.println(testActivityReminder.categoryTags.values());
+        System.out.println(testActivityReminder.tag.categoryTags.keySet());
+        System.out.println(testActivityReminder.tag.categoryTags.values());
     }
 
 
@@ -51,10 +50,10 @@ class ActivityReminderTest {
         testActivityReminder.addTag(testCategory1,"#fit");
         testActivityReminder.addTag(testCategory1,"#physicalgrowth");
 
-        assertTrue(testActivityReminder.categoryTags.containsKey(testCategory1));
-        assertTrue(testActivityReminder.categoryTags.containsKey(testCategory2));
+        assertTrue(testActivityReminder.tag.categoryTags.containsKey(testCategory1));
+        assertTrue(testActivityReminder.tag.categoryTags.containsKey(testCategory2));
 
-        testActivityReminder.categoryTags.values();
+        testActivityReminder.tag.categoryTags.values();
 
     }
 
@@ -64,8 +63,32 @@ class ActivityReminderTest {
         testActivityReminder.addTag(testCategory1,"#fit");
         testActivityReminder.addTag(testCategory1,"#physicalgrowth");
 
-        System.out.println(testActivityReminder.categoryTags.values());
+        System.out.println(testActivityReminder.tag.categoryTags.values());
 
+    }
+
+    @Test
+    void testCheckIn() {
+        Breathe = new Breathe();
+        testActivityReminder.checkIn(Breathe);
+        assertEquals("today",testActivityReminder.status);
+    }
+
+
+    @Test
+    void testAddActivity() {
+        Breathe = new Breathe();
+        testActivityReminder.addActivity(Breathe);
+        assertEquals(1, testActivityReminder.homepageD.size());
+    }
+
+    @Test
+    void testAddThenRemoveActivity() {
+        Breathe = new Breathe();
+        testActivityReminder.addActivity(Breathe);
+        assertEquals(1, testActivityReminder.homepageD.size());
+        testActivityReminder.removeActivity(Breathe);
+        assertEquals(0, testActivityReminder.homepageD.size());
     }
 
 

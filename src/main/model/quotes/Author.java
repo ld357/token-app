@@ -19,13 +19,23 @@ public class Author {
     }
 
     public void addQuote(Quote q) {
+        quoteVerification(q);
+
         if (!quotes.contains(q)) {
             quotes.add(q);
             q.addAuthor(this);
         }
     }
 
+    private void quoteVerification(Quote q) {
+        if (q.name.equals("")) {
+            System.out.println("This is not a quote!");
+        }
+    }
+
     public void removeQuote(Quote q) {
+        quoteVerification(q);
+
         if (quotes.contains(q)) {
             quotes.remove(q);
             q.removeAuthor(this);

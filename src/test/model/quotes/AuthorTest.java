@@ -9,12 +9,14 @@ class AuthorTest {
     Author testAuthor;
     Quote testQuote1;
     Quote testQuote2;
+    Quote testQuote3;
 
     @BeforeEach
     void setUp() {
         testAuthor = new Author("Confucius",0);
         testQuote1 = new Quote("This is an example");
         testQuote2 = new Quote("This is another exmaple");
+        testQuote3 = new Quote("");
     }
 
     @Test
@@ -53,6 +55,12 @@ class AuthorTest {
         assertEquals(0, testAuthor.getQuotes().size());
         assertEquals(null, testQuote1.getAuthor());
         assertEquals(null, testQuote2.getAuthor());
+    }
+
+    @Test
+    void testAddEmptyQuote() {
+        testAuthor.addQuote(testQuote3);
+        assertEquals(1, testAuthor.getQuotes().size());
     }
 
 }
