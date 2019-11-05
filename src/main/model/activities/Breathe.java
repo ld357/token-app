@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class Breathe implements Activities {
     String name;
     String status;
-    ArrayList<Activities> selectiondata;
-    ArrayList<Activities> homepagedata;
 
     public Breathe() {
         this.name = "Breathe";
@@ -15,24 +13,6 @@ public class Breathe implements Activities {
 
     }
 
-
-    public ArrayList<Activities> getSelectionData() {
-        return selectiondata;
-    }
-
-    public ArrayList<Activities> getHomepageData() {
-        return homepagedata;
-    }
-
-    @Override
-    public void addActivity() {
-
-    }
-
-    @Override
-    public void checkIn() {
-
-    }
 
     @Override
     public String getActivityName() {

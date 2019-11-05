@@ -26,7 +26,6 @@ public class ActivityReminder {
 
     // MODIFIES: this
     // EFFECTS: changes status of activity to "today"
-    // TODO 1 : Write test for this method!!!!
     public void checkIn(Activities actChoice) {
         this.status = "today";
     }
@@ -35,7 +34,6 @@ public class ActivityReminder {
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
     // EFFECTS: activity is added to the list if it's not
     // already in the list
-    // TODO 2: Write test for this method!!
     public void addActivity(Activities actChoice) {
         homepageD.add(actChoice);
 
@@ -44,12 +42,9 @@ public class ActivityReminder {
     // REQUIRES: activity is an element of the list
     // MODIFIES: this
     // EFFECTS: activity is removed from the list
-    // TODO 3: Write test for this method!!
     public void removeActivity(Activities actChoice) {
         homepageD.remove(actChoice);
     }
-
-
 
     public void provideTags(Category category) {
         tag.provideTags(category);
