@@ -1,7 +1,6 @@
 package model.moods;
 
-public interface Moods {
-
+public interface Mood {
 
     String getMoodName();
 

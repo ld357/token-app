@@ -1,6 +1,6 @@
 package model.moods;
 
-public class Terrible extends AllMoods implements Moods {
+public class Terrible extends AllTypesOfMoods implements Mood {
     int moodNum;
     String moodName;
     String soundMood;

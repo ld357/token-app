@@ -1,6 +1,6 @@
 package model.moods;
 
-public class Content extends AllMoods implements Moods {
+public class Content extends AllTypesOfMoods implements Mood {
     int moodNum;
     String moodName;
     String soundMood;

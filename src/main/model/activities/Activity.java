@@ -1,6 +1,6 @@
 package model.activities;
 
-public interface Activities {
+public interface Activity {
 
     String getActivityName();
 

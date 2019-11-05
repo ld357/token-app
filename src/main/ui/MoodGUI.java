@@ -1,7 +1,7 @@
 package ui;
 
 import model.moods.MoodTracker;
-import model.moods.Moods;
+import model.moods.Mood;
 import model.exceptions.MoodWasNotAdded;
 import model.exceptions.NoMoodChoiceSelected;
 
@@ -10,7 +10,7 @@ public class MoodGUI {
     // private JLabel statusLabel;
 
 
-    public void setMood(MoodTracker mt, Moods moodChoice) {
+    public void setMood(MoodTracker mt, Mood moodChoice) {
         try {
             mt.changeMood(moodChoice);
             // drawMood();
@@ -24,7 +24,7 @@ public class MoodGUI {
 
     }
 
-    public void removeMood(MoodTracker mt, Moods moodChoice) {
+    public void removeMood(MoodTracker mt, Mood moodChoice) {
         try {
             mt.removeMood(moodChoice);
             // drawMood();

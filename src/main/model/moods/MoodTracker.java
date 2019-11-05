@@ -6,19 +6,19 @@ import model.exceptions.NoMoodChoiceSelected;
 import java.util.HashSet;
 
 public class MoodTracker {
-    private Moods moodChoice;
-    private HashSet<Moods> homepagedata;
-    private HashSet<Moods> selectiondata;
+    private Mood moodChoice;
+    private HashSet<Mood> homepagedata;
+    private HashSet<Mood> selectiondata;
 
 
     public MoodTracker() {
-        selectiondata = new HashSet<Moods>();
+        selectiondata = new HashSet<Mood>();
         this.moodChoice = null;
-        Moods amazing = new Amazing();
-        Moods content = new Content();
-        Moods meh = new Meh();
-        Moods bad = new Bad();
-        Moods terrible = new Terrible();
+        Mood amazing = new Amazing();
+        Mood content = new Content();
+        Mood meh = new Meh();
+        Mood bad = new Bad();
+        Mood terrible = new Terrible();
         selectiondata.add(amazing);
         selectiondata.add(content);
         selectiondata.add(meh);
@@ -26,22 +26,22 @@ public class MoodTracker {
         selectiondata.add(terrible);
 
 
-        homepagedata = new HashSet<Moods>();
+        homepagedata = new HashSet<Mood>();
         System.out.println("How are you feeling today?");
 
     }
 
 
     // getters
-    public Moods getMoodChoice(Moods moodChoice) {
+    public Mood getMoodChoice(Mood moodChoice) {
         return moodChoice;
     }
 
-    public HashSet<Moods> getHD() {
+    public HashSet<Mood> getHD() {
         return homepagedata;
     }
 
-    public void setMoodChoice(Moods moodChoice) {
+    public void setMoodChoice(Mood moodChoice) {
         this.moodChoice = moodChoice;
 
     }
@@ -50,13 +50,13 @@ public class MoodTracker {
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
     // EFFECTS: mood is added to the list if it's not
     // already in the list
-    public void addMood(Moods moodChoice) {
+    public void addMood(Mood moodChoice) {
         homepagedata.add(moodChoice);
     }
 
     // MODIFIES: this
     // EFFECTS: mood is removed from list
-    public void removeMood(Moods moodChoice) throws MoodWasNotAdded {
+    public void removeMood(Mood moodChoice) throws MoodWasNotAdded {
         if (!homepagedata.contains(moodChoice)) {
             throw new MoodWasNotAdded();
         }
@@ -65,7 +65,7 @@ public class MoodTracker {
 
     // MODIFIES: this
     // EFFECTS: changes mood to different mood
-    public void changeMood(Moods moodChoice) throws NoMoodChoiceSelected {
+    public void changeMood(Mood moodChoice) throws NoMoodChoiceSelected {
         if (this.moodChoice == null) {
             throw new NoMoodChoiceSelected();
         }

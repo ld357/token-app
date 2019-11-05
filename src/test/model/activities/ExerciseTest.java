@@ -5,20 +5,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BreatheTest {
-    Activity breathe;
+class ExerciseTest {
+    Activity exercise;
 
     @BeforeEach
     void setUp() {
-        breathe = new Breathe();
+        exercise = new Exercise();
     }
 
     @Test
     void testConstructor() {
-        assertEquals("today",breathe.getStatus());
-        assertEquals("Breathe", breathe.getActivityName());
+        assertEquals("today",exercise.getStatus());
+        assertEquals("Exercise", exercise.getActivityName());
 
     }
-
 
 }

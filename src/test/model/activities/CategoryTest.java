@@ -9,12 +9,16 @@ class CategoryTest {
     Category testCategory1;
     Category testCategory2;
     Category testCategory3;
+    Category testCategory4;
+    Category testCategory5;
 
     @BeforeEach
     void setUp() {
         testCategory1 = new Category("High Active",5,false);
         testCategory2 = new Category("Medium Active",3,false);
         testCategory3 = new Category("Medium Active",3,false);
+        testCategory4 = new Category("Medium Active",3,true);
+        testCategory5 = new Category("Weird Active",3,false);
     }
 
     @Test
@@ -42,5 +46,26 @@ class CategoryTest {
         assertFalse(testCategory2.equals(testCategory1));
         assertFalse(testCategory1.hashCode() == testCategory2.hashCode());
     }
+
+    @Test
+    void sameObjectWithComparison() {
+        assertTrue(testCategory1.equals(testCategory1));
+    }
+
+    @Test
+    void nullObjectWithComparison() {
+        assertFalse(testCategory1.equals(null));
+    }
+
+    @Test
+    void needsPeopleDifferent() {
+        assertFalse(testCategory3.equals(testCategory4));
+    }
+
+    @Test
+    void needsDifferentName() {
+        assertFalse(testCategory3.equals(testCategory5));
+    }
+
 
 }

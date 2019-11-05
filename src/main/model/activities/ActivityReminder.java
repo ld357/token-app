@@ -1,32 +1,48 @@
 package model.activities;
 
-import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 
 public class ActivityReminder {
-    private String name;
+    protected String name;
     protected String status;
-    private ArrayList<Activities> selectionD;
-    private Activities actChoice;
-    protected ArrayList<Activities> homepageD;
+    protected ArrayList<Activity> selectionD;
+    protected Activity actChoice;
+    protected ArrayList<Activity> homepageD;
     Tag tag = new Tag();
 
 
     public ActivityReminder() {
         this.name = "";
         this.status = "not yet completed";
-        homepageD = new ArrayList<Activities>();
+
+        selectionD = new ArrayList<>();
+        Activity breathe = new Breathe();
+        Activity exercise = new Exercise();
+        Activity hydrate = new Hydrate();
+        Activity inspire = new Inspire();
+        Activity interact = new Interact();
+        Activity rest = new Rest();
+        Activity revitalize  = new Revitalize();
+        Activity refresh = new Refresh();
+
+
+        selectionD.add(breathe);
+        selectionD.add(exercise);
+        selectionD.add(hydrate);
+        selectionD.add(inspire);
+        selectionD.add(interact);
+        selectionD.add(rest);
+        selectionD.add(revitalize);
+        selectionD.add(refresh);
+
+        homepageD = new ArrayList<Activity>();
         System.out.println("What would you like to remind yourself to do?");
 
     }
 
     // MODIFIES: this
     // EFFECTS: changes status of activity to "today"
-    public void checkIn(Activities actChoice) {
+    public void checkIn(Activity actChoice) {
         this.status = "today";
     }
 
@@ -34,7 +50,7 @@ public class ActivityReminder {
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
     // EFFECTS: activity is added to the list if it's not
     // already in the list
-    public void addActivity(Activities actChoice) {
+    public void addActivity(Activity actChoice) {
         homepageD.add(actChoice);
 
     }
@@ -42,7 +58,7 @@ public class ActivityReminder {
     // REQUIRES: activity is an element of the list
     // MODIFIES: this
     // EFFECTS: activity is removed from the list
-    public void removeActivity(Activities actChoice) {
+    public void removeActivity(Activity actChoice) {
         homepageD.remove(actChoice);
     }
 

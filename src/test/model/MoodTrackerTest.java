@@ -12,14 +12,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MoodTrackerTest {
     MoodTracker testMoodTracker;
-    Moods testAmazing;
+    Mood testAmazing;
     String testName;
     int testNum;
-    Moods testMoodChoice;
+    Mood testMoodChoice;
     String testSoundMood;
     String testAnnounceMood;
-    HashSet<Moods> testHomepageData;
-    HashSet<Moods> testSelectionData;
+    HashSet<Mood> testHomepageData;
+    HashSet<Mood> testSelectionData;
 
 
     @BeforeEach
@@ -29,7 +29,7 @@ class MoodTrackerTest {
 
     @Test
     void testAmazing() {
-        Moods testAmazing = new Amazing();
+        Mood testAmazing = new Amazing();
         Amazing testAmazing2 = new Amazing();
         testNum = 5;
         testName = "amazing";
@@ -45,7 +45,7 @@ class MoodTrackerTest {
 
     @Test
     void testContent() {
-        Moods testContent = new Content();
+        Mood testContent = new Content();
         testNum = 4;
         testName = "content";
         assertEquals(testNum, testContent.getMoodNum());
@@ -54,7 +54,7 @@ class MoodTrackerTest {
 
     @Test
     void testMeh() {
-        Moods testMeh = new Meh();
+        Mood testMeh = new Meh();
         testNum = 3;
         testName = "meh";
         assertEquals(testNum, testMeh.getMoodNum());
@@ -63,7 +63,7 @@ class MoodTrackerTest {
 
     @Test
     void testBad() {
-        Moods testBad = new Bad();
+        Mood testBad = new Bad();
         testNum = 2;
         testName = "bad";
         assertEquals(testNum, testBad.getMoodNum());
@@ -72,7 +72,7 @@ class MoodTrackerTest {
 
     @Test
     void testTerrible() {
-        Moods testTerrible = new Terrible();
+        Mood testTerrible = new Terrible();
         testNum = 1;
         testName = "terrible";
         assertEquals(testNum, testTerrible.getMoodNum());
@@ -81,7 +81,7 @@ class MoodTrackerTest {
 
     @Test
     void testAddMood() {
-        Moods testAmazing = new Amazing();
+        Mood testAmazing = new Amazing();
         testMoodTracker.addMood(testAmazing);
         assertEquals(1, testMoodTracker.getHD().size());
     }
@@ -89,7 +89,7 @@ class MoodTrackerTest {
     @Test
     void testRemoveMoodWithNoException() {
         try {
-        Moods testAmazing = new Amazing();
+        Mood testAmazing = new Amazing();
         testMoodTracker.addMood(testAmazing);
         testMoodTracker.removeMood(testAmazing); }
         catch (MoodWasNotAdded ee) {
@@ -109,7 +109,7 @@ class MoodTrackerTest {
 
     @Test
     void testSetMood() {
-        Moods testAmazing = new Amazing();
+        Mood testAmazing = new Amazing();
         testMoodTracker.setMoodChoice(testAmazing);
         testMoodChoice = testAmazing;
         assertEquals(testMoodChoice, testMoodTracker.getMoodChoice(testAmazing));
@@ -117,9 +117,9 @@ class MoodTrackerTest {
 
     @Test
     void testChangeMoodNoThrowException() {
-        Moods testContent = new Content();
+        Mood testContent = new Content();
         testMoodTracker.setMoodChoice(testContent);
-        Moods testAmazing = new Amazing();
+        Mood testAmazing = new Amazing();
         try {
             testMoodTracker.changeMood(testAmazing);
         } catch (NoMoodChoiceSelected noMoodChoiceSelected) {
@@ -131,7 +131,7 @@ class MoodTrackerTest {
 
     @Test
     void testChangeMoodThrowsException() {
-        Moods testContent = new Content();
+        Mood testContent = new Content();
         try {
             testMoodTracker.changeMood(testContent);
             fail("This should thrown an exception!");

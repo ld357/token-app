@@ -1,16 +1,15 @@
 package model.activities;
 
-public class Breathe implements Activity {
+public class Interact implements Activity {
     String name;
     String status;
 
-    public Breathe() {
-        this.name = "Breathe";
+    public Interact() {
+        this.name = "Interact";
         this.status = "today";
-        System.out.println("Just take a breath of fresh air, everything will be okay!");
+        System.out.println("Have you had a genuine conversation today?");
 
     }
-
 
     @Override
     public String getActivityName() {
