@@ -15,10 +15,17 @@ class RestTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",rest.getStatus());
+        assertEquals("not yet completed",rest.getStatus());
         assertEquals("Rest", rest.getActivityName());
 
     }
+
+    @Test
+    void testStatus() {
+        rest.setStatus();
+        assertEquals("today",rest.getStatus());
+    }
+
 
 
 

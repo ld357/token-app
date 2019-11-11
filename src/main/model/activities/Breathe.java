@@ -6,7 +6,7 @@ public class Breathe implements Activity {
 
     public Breathe() {
         this.name = "Breathe";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Just take a breath of fresh air, everything will be okay!");
 
     }
@@ -21,4 +21,10 @@ public class Breathe implements Activity {
     public String getStatus() {
         return status;
     }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
+    }
+
 }

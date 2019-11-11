@@ -15,9 +15,16 @@ class ExerciseTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",exercise.getStatus());
+        assertEquals("not yet completed",exercise.getStatus());
         assertEquals("Exercise", exercise.getActivityName());
 
     }
+
+    @Test
+    void testStatus() {
+        exercise.setStatus();
+        assertEquals("today",exercise.getStatus());
+    }
+
 
 }

@@ -15,9 +15,16 @@ class InteractTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",interact.getStatus());
+        assertEquals("not yet completed",interact.getStatus());
         assertEquals("Interact", interact.getActivityName());
 
     }
+
+    @Test
+    void testStatus() {
+        interact.setStatus();
+        assertEquals("today",interact.getStatus());
+    }
+
 
 }

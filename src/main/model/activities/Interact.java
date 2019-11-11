@@ -6,7 +6,7 @@ public class Interact implements Activity {
 
     public Interact() {
         this.name = "Interact";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Have you had a genuine conversation today?");
 
     }
@@ -19,5 +19,10 @@ public class Interact implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
     }
 }

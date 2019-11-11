@@ -15,10 +15,17 @@ class RevitalizeTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",revitalize.getStatus());
+        assertEquals("not yet completed",revitalize.getStatus());
         assertEquals("Revitalize", revitalize.getActivityName());
 
     }
+
+    @Test
+    void testStatus() {
+        revitalize.setStatus();
+        assertEquals("today",revitalize.getStatus());
+    }
+
 
 
 

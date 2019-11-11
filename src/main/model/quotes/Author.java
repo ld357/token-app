@@ -18,6 +18,10 @@ public class Author {
         return quotes;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void addQuote(Quote q) {
         quoteVerification(q);
 

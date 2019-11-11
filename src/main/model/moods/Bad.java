@@ -36,7 +36,7 @@ public class Bad extends AllTypesOfMoods implements Mood {
     @Override
     // EFFECTS: sets soundMood
     public void soundMood() {
-        this.soundMood = "Ughhh!.";
+        this.soundMood = "Ugh!";
     }
 
     @Override

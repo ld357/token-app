@@ -37,6 +37,8 @@ public class MoodGUI {
         }
     }
 
-
+    public static void main(String[] args) {
+        MoodTracker moods = new MoodTracker();
+    }
 
 }

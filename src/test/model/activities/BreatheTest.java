@@ -15,9 +15,15 @@ class BreatheTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",breathe.getStatus());
+        assertEquals("not yet completed",breathe.getStatus());
         assertEquals("Breathe", breathe.getActivityName());
 
+    }
+
+    @Test
+    void testStatus() {
+        breathe.setStatus();
+        assertEquals("today",breathe.getStatus());
     }
 
 

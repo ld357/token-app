@@ -16,7 +16,14 @@ class QuoteTest {
     void setUp() {
         testAuthor = new Author("Confucius", 0);
         testQuote1 = new Quote("This is an example");
-        testQuote2 = new Quote("This is another exmaple");
+        testQuote2 = new Quote("This is another example");
+    }
+
+    @Test
+    void testingName() {
+        assertEquals("This is another example", testQuote2.getName());
+        assertEquals("This is an example", testQuote1.getName());
+
     }
 
     @Test

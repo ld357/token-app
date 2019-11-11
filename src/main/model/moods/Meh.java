@@ -45,6 +45,5 @@ public class Meh extends AllTypesOfMoods implements Mood {
         this.announcement = "I am feeling meh!";
 
     }
-    // MODIFIES: this
-    // EFFECTS: sets data for meh mood
+
 }

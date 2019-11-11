@@ -6,7 +6,7 @@ public class Hydrate implements Activity {
 
     public Hydrate() {
         this.name = "Hydrate";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Your body needs to be hydrated!");
 
     }
@@ -19,5 +19,10 @@ public class Hydrate implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
     }
 }

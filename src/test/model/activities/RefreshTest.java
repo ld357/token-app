@@ -15,9 +15,16 @@ class RefreshTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",refresh.getStatus());
+        assertEquals("not yet completed",refresh.getStatus());
         assertEquals("Refresh", refresh.getActivityName());
 
     }
+
+    @Test
+    void testStatus() {
+        refresh.setStatus();
+        assertEquals("today",refresh.getStatus());
+    }
+
 
 }

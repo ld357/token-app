@@ -6,7 +6,7 @@ public class Revitalize implements Activity {
 
     public Revitalize() {
         this.name = "Revitalize";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Boost your energy with some fruits and snacks!");
 
     }
@@ -19,6 +19,11 @@ public class Revitalize implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
     }
 
 }

@@ -26,7 +26,6 @@ public class Amazing extends AllTypesOfMoods implements Mood {
         return soundMood;
     }
 
-
     public String getAnnouncement() {
         return announcement;
     }

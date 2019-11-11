@@ -83,6 +83,25 @@ class ActivityReminderTest {
         Breathe = new Breathe();
         testActivityReminder.addActivity(Breathe);
         assertEquals(1, testActivityReminder.homepageD.size());
+        assertEquals("today", Breathe.getStatus());
+    }
+
+    @Test
+    void testAddActivityThere() {
+        Breathe = new Breathe();
+        testActivityReminder.addActivity(Breathe);
+        assertEquals(1, testActivityReminder.homepageD.size());
+        testActivityReminder.addActivity(Breathe);
+        assertEquals(1, testActivityReminder.homepageD.size());
+        assertEquals("today", Breathe.getStatus());
+    }
+
+    @Test
+    void testRemoveActivityNotThere() {
+        Breathe = new Breathe();
+        testActivityReminder.removeActivity(Breathe);
+        assertEquals(0, testActivityReminder.homepageD.size());
+
     }
 
     @Test
@@ -90,6 +109,7 @@ class ActivityReminderTest {
         Breathe = new Breathe();
         testActivityReminder.addActivity(Breathe);
         assertEquals(1, testActivityReminder.homepageD.size());
+        assertEquals("today", Breathe.getStatus());
         testActivityReminder.removeActivity(Breathe);
         assertEquals(0, testActivityReminder.homepageD.size());
     }

@@ -15,9 +15,15 @@ class InspireTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",inspire.getStatus());
+        assertEquals("not yet completed",inspire.getStatus());
         assertEquals("Inspire", inspire.getActivityName());
 
+    }
+
+    @Test
+    void testStatus() {
+        inspire.setStatus();
+        assertEquals("today",inspire.getStatus());
     }
 
 }

@@ -24,6 +24,7 @@ class AuthorTest {
         testAuthor.addQuote(testQuote1);
         assertEquals(true,testAuthor.getQuotes().contains(testQuote1));
         assertEquals(testAuthor, testQuote1.getAuthor());
+        assertEquals("Confucius", testAuthor.getName());
     }
 
     @Test

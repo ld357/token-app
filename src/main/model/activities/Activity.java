@@ -6,5 +6,7 @@ public interface Activity {
 
     String getStatus();
 
+    void setStatus();
+
 
 }

@@ -15,9 +15,16 @@ class HydrateTest {
 
     @Test
     void testConstructor() {
-        assertEquals("today",hydrate.getStatus());
+        assertEquals("not yet completed",hydrate.getStatus());
         assertEquals("Hydrate", hydrate.getActivityName());
 
     }
+
+    @Test
+    void testStatus() {
+        hydrate.setStatus();
+        assertEquals("today",hydrate.getStatus());
+    }
+
 
 }

@@ -24,9 +24,17 @@ public class Tag {
         addTag(highActive,"#fit");
         addTag(highActive,"#physicalgrowth");
         addTag(highActive,"#strength");
+        addTag(mediumActive,"#fit");
+        addTag(mediumActive,"#physicalgrowth");
+        addTag(mediumActive,"#strength");
+        addTag(lowActive,"#fit");
+        addTag(lowActive,"#physicalgrowth");
+        addTag(lowActive,"#strength");
+
         addTag(selfDevelopment, "#mentalmind");
         addTag(selfDevelopment,"#selflove");
         addTag(selfPractice, "#meditation");
+        addTag(selfPractice, "#selfcare");
 
     }
 

@@ -6,7 +6,7 @@ public class Inspire implements Activity {
 
     public Inspire() {
         this.name = "Inspire";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Look for opportunities for growth and see where you end up!");
 
     }
@@ -19,5 +19,10 @@ public class Inspire implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
     }
 }

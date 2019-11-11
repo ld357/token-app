@@ -6,7 +6,7 @@ public class Rest implements Activity {
 
     public Rest() {
         this.name = "Rest";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Take a break or a nap- you'll thank yourself later!");
 
     }
@@ -19,6 +19,11 @@ public class Rest implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
     }
 
 }

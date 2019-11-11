@@ -6,7 +6,7 @@ public class Exercise implements Activity {
 
     public Exercise() {
         this.name = "Exercise";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Getting exercise will help you relax and ease your mind!");
 
     }
@@ -19,6 +19,11 @@ public class Exercise implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
     }
 
 }

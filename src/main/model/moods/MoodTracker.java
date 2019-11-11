@@ -3,16 +3,17 @@ package model.moods;
 import model.exceptions.MoodWasNotAdded;
 import model.exceptions.NoMoodChoiceSelected;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class MoodTracker {
     private Mood moodChoice;
-    private HashSet<Mood> homepagedata;
-    private HashSet<Mood> selectiondata;
+    private ArrayList<Mood> homepagedata;
+    private ArrayList<Mood> selectiondata;
 
 
     public MoodTracker() {
-        selectiondata = new HashSet<Mood>();
+        selectiondata = new ArrayList<Mood>();
         this.moodChoice = null;
         Mood amazing = new Amazing();
         Mood content = new Content();
@@ -26,7 +27,7 @@ public class MoodTracker {
         selectiondata.add(terrible);
 
 
-        homepagedata = new HashSet<Mood>();
+        homepagedata = new ArrayList<Mood>();
         System.out.println("How are you feeling today?");
 
     }
@@ -37,7 +38,7 @@ public class MoodTracker {
         return moodChoice;
     }
 
-    public HashSet<Mood> getHD() {
+    public ArrayList<Mood> getHD() {
         return homepagedata;
     }
 
@@ -51,7 +52,9 @@ public class MoodTracker {
     // EFFECTS: mood is added to the list if it's not
     // already in the list
     public void addMood(Mood moodChoice) {
-        homepagedata.add(moodChoice);
+        if (!homepagedata.contains(moodChoice)) {
+            homepagedata.add(moodChoice);
+        }
     }
 
     // MODIFIES: this

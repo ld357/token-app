@@ -6,7 +6,7 @@ public class Refresh implements Activity {
 
     public Refresh() {
         this.name = "Refresh";
-        this.status = "today";
+        this.status = "not yet completed";
         System.out.println("Take a quick shower and relieve your muscles!");
 
     }
@@ -19,5 +19,11 @@ public class Refresh implements Activity {
     @Override
     public String getStatus() {
         return status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
+
     }
 }

@@ -84,6 +84,8 @@ class MoodTrackerTest {
         Mood testAmazing = new Amazing();
         testMoodTracker.addMood(testAmazing);
         assertEquals(1, testMoodTracker.getHD().size());
+        testMoodTracker.addMood(testAmazing);
+        assertEquals(1, testMoodTracker.getHD().size());
     }
 
     @Test
@@ -166,7 +168,7 @@ class MoodTrackerTest {
     void testSoundBMood() {
         Bad testBad = new Bad();
         testBad.soundMood();
-        testSoundMood = "Ughhh!.";
+        testSoundMood = "Ugh!";
         assertEquals(testSoundMood, testBad.getSoundMood());
 
     }

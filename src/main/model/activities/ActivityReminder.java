@@ -51,15 +51,19 @@ public class ActivityReminder {
     // EFFECTS: activity is added to the list if it's not
     // already in the list
     public void addActivity(Activity actChoice) {
-        homepageD.add(actChoice);
-
+        if (!homepageD.contains(actChoice)) {
+            homepageD.add(actChoice);
+            actChoice.setStatus();
+        }
     }
 
     // REQUIRES: activity is an element of the list
     // MODIFIES: this
     // EFFECTS: activity is removed from the list
     public void removeActivity(Activity actChoice) {
-        homepageD.remove(actChoice);
+        if (homepageD.contains(actChoice)) {
+            homepageD.remove(actChoice);
+        }
     }
 
     public void provideTags(Category category) {
@@ -70,43 +74,8 @@ public class ActivityReminder {
         tag.addCategory(category);
     }
 
-    public void addTag(Category c, String taglabel) {
-        tag.addTag(c, taglabel);
+    public void addTag(Category c, String label) {
+        tag.addTag(c, label);
     }
 
 }
-
-
-
-
-//  public Map<Category, ArrayList<String>> categoryTags;
-//  categoryTags = new HashMap<>();
-//        Category highActive = new Category("High Active",5,false);
-//        Category mediumActive = new Category("Medium Active",3,false);
-//        Category lowActive = new Category("Low Active",1,false);
-//        Category selfDevelopment = new Category("Self Development", 0, false);
-//        Category selfPractice = new Category("Self Practice", 0, false);
-//
-//        addCategory(highActive);
-//        addCategory(mediumActive);
-//        addCategory(lowActive);
-//        addCategory(selfDevelopment);
-//        addCategory(selfPractice);
-//
-//        addTag(highActive,"#fit");
-//        addTag(highActive,"#physicalgrowth");
-//        addTag(highActive,"#strength");
-//        addTag(selfDevelopment, "#mentalmind");
-//        addTag(selfDevelopment,"#selflove");
-//        addTag(selfPractice, "#meditation");
-
-
-//        ArrayList<String> names = categoryTags.get(category);
-//        for (String name: names) {
-//            System.out.println(name + ",");
-//        }
-
-//        categoryTags.put(category, new ArrayList<>());
-
-//        ArrayList<String> tags = categoryTags.get(c);
-//        tags.add(tag);
