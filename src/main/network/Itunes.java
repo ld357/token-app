@@ -1,10 +1,15 @@
 package network;
 
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONString;
 
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Itunes {
 
@@ -30,11 +35,7 @@ public class Itunes {
                 sb.append(System.lineSeparator());
             }
 
-            System.out.println(sb);
-
-
-
-
+            JSONObject myJSO = new JSONObject(sb.toString());
 
         } finally {
 
@@ -49,3 +50,21 @@ public class Itunes {
 
 
 }
+
+// System.out.println(sb);
+
+//    myJSON.getJSONArray("resultCount");
+//   System.out.println(myJSON.getString("results"));
+//    JSONObject results = myJSON.getJSONObject("resultCount");
+//     JSONArray trackNames = results.getJSONArray("trackName");
+// System.out.println(myJSON.
+//  System.out.println(myJSON.keySet().size());
+// myJSON.getString("resultCount");
+//    JSONArray data1 = jObject.getJSONArray("results");
+//    JSONObject results = myJSON.getJSONObject("results");
+//   JSONArray trackNames = results.getJSONArray("trackName");
+//    System.out.println(trackNames);
+
+// JSONObject obj =  new JSONObject(json);
+//JSONObject results = obj.getJSONObject("results");
+//JSONArray bindings = results.getJSONArray("bindings");
