@@ -1,9 +1,6 @@
 package network;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONString;
-import sun.misc.IOUtils;
+
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -35,9 +32,6 @@ public class Itunes {
 
             System.out.println(sb);
 
-           // JSONObject json = new JSONObject(theURL);
-           // JSONObject results = json.getJSONObject("results");
-           // JSONArray trackName = results.getJSONArray("trackName");
 
 
 
