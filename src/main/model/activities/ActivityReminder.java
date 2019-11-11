@@ -91,7 +91,9 @@ public class ActivityReminder implements Activity {
 
     @Override
     public void setStatus() {
-        this.status = "today";
+        for (Activity activity: selectionD) {
+            activity.setStatus();
+        }
 
     }
 }

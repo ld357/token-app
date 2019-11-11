@@ -26,10 +26,16 @@ class ActivityReminderTest {
         assertEquals("",testActivityReminder.getActivityName());
         assertEquals("not yet completed",testActivityReminder.getStatus());
         assertEquals(8, testActivityReminder.selectionD.size());
-        testActivityReminder.setStatus();
-        assertEquals("today",testActivityReminder.getStatus());
     }
 
+
+    @Test
+    void testForSetStatus() {
+        Breathe = new Breathe();
+        testActivityReminder.addActivity(Breathe);
+        testActivityReminder.setStatus();
+        assertEquals("today", Breathe.getStatus());
+    }
 
     @Test
     void testProvideTags() {
