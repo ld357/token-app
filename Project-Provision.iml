@@ -26,5 +26,7 @@
     </orderEntry>
     <orderEntry type="library" name="org.json:json:20190722" level="project" />
     <orderEntry type="library" name="org.json:json:201907221" level="project" />
+    <orderEntry type="library" name="org.json:json:20180130" level="project" />
+    <orderEntry type="library" name="org.json:json:201801301" level="project" />
   </component>
 </module>
