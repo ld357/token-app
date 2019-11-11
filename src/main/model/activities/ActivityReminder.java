@@ -2,7 +2,7 @@ package model.activities;
 
 import java.util.ArrayList;
 
-public class ActivityReminder {
+public class ActivityReminder implements Activity {
     protected String name;
     protected String status;
     protected ArrayList<Activity> selectionD;
@@ -78,4 +78,20 @@ public class ActivityReminder {
         tag.addTag(c, label);
     }
 
+
+    @Override
+    public String getActivityName() {
+        return this.name;
+    }
+
+    @Override
+    public String getStatus() {
+        return this.status;
+    }
+
+    @Override
+    public void setStatus() {
+        this.status = "today";
+
+    }
 }

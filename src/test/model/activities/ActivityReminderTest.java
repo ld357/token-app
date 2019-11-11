@@ -23,9 +23,11 @@ class ActivityReminderTest {
 
     @Test
     void testConstructor() {
-        assertEquals("",testActivityReminder.name);
-        assertEquals("not yet completed",testActivityReminder.status);
+        assertEquals("",testActivityReminder.getActivityName());
+        assertEquals("not yet completed",testActivityReminder.getStatus());
         assertEquals(8, testActivityReminder.selectionD.size());
+        testActivityReminder.setStatus();
+        assertEquals("today",testActivityReminder.getStatus());
     }
 
 

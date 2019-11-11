@@ -1,15 +1,11 @@
 package network;
 
 
-import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONString;
 
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Itunes {
 
@@ -35,7 +31,8 @@ public class Itunes {
                 sb.append(System.lineSeparator());
             }
 
-            JSONObject myJSO = new JSONObject(sb.toString());
+            System.out.println(sb);
+       //     JSONObject myJSO = new JSONObject(sb.toString());
 
 
         } finally {
