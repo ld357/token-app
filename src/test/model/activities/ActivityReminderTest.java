@@ -16,6 +16,12 @@ class ActivityReminderTest {
     Category testCategory2;
     Activity Breathe;
     Activity Exercise;
+    Activity Hydrate;
+    Activity Inspire;
+    Activity Interact;
+    Activity Refresh;
+    Activity Rest;
+    Activity Revitalize;
 
 
     @BeforeEach
@@ -131,19 +137,57 @@ class ActivityReminderTest {
     void testSaving() throws FileNotFoundException, UnsupportedEncodingException {
         Breathe = new Breathe();
         Exercise = new Exercise();
+        Hydrate = new Hydrate();
+        Inspire = new Inspire();
+        Interact = new Interact();
+        Refresh = new Refresh();
+        Rest = new Rest();
+        Revitalize = new Revitalize();
+
+
+
         testActivityReminder.addActivity(Breathe);
         testActivityReminder.addActivity(Exercise);
+        testActivityReminder.addActivity(Hydrate);
+        testActivityReminder.addActivity(Inspire);
+        testActivityReminder.addActivity(Interact);
+        testActivityReminder.addActivity(Refresh);
+        testActivityReminder.addActivity(Rest);
+        testActivityReminder.addActivity(Revitalize);
 
     }
 
     @Test
     void testLoading() throws IOException {
         Breathe = new Breathe();
+        Exercise = new Exercise();
+        Hydrate = new Hydrate();
+        Inspire = new Inspire();
+        Interact = new Interact();
+        Refresh = new Refresh();
+        Rest = new Rest();
+        Revitalize = new Revitalize();
+
         testActivityReminder.addActivity(Breathe);
+        testActivityReminder.addActivity(Exercise);
+        testActivityReminder.addActivity(Hydrate);
+        testActivityReminder.addActivity(Inspire);
+        testActivityReminder.addActivity(Interact);
+        testActivityReminder.addActivity(Refresh);
+        testActivityReminder.addActivity(Rest);
+        testActivityReminder.addActivity(Revitalize);
+
 
         testActivityReminder.loadActivities();
 
         testActivityReminder.homepageD.contains(Breathe);
+        testActivityReminder.homepageD.contains(Exercise);
+        testActivityReminder.homepageD.contains(Hydrate);
+        testActivityReminder.homepageD.contains(Inspire);
+        testActivityReminder.homepageD.contains(Interact);
+        testActivityReminder.homepageD.contains(Refresh);
+        testActivityReminder.homepageD.contains(Rest);
+        testActivityReminder.homepageD.contains(Revitalize);
 
     }
 
