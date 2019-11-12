@@ -180,6 +180,7 @@ class ActivityReminderTest {
 
 
         testActivityReminder.loadActivities();
+//        testActivityReminder.updateHD();
 
         testActivityReminder.savedActivities.contains(Breathe);
         testActivityReminder.savedActivities.contains(Exercise);

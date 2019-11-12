@@ -58,11 +58,18 @@ public class ActivityReminder implements Activity {
 
     }
 
-    // MODIFIES: this
-    // EFFECTS: changes status of activity to "today"
-    public void checkIn(Activity actChoice) {
+    public void checkIn(Activity a) {
         this.status = "today";
     }
+//
+//    public void updateHD() throws FileNotFoundException, UnsupportedEncodingException {
+//        for (Activity a: savedActivities) {
+//            if (!homepageD.contains(a) && savedActivities != null) {
+//                homepageD.add(a);
+//            }
+//        }
+//
+//    }
 
 
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
