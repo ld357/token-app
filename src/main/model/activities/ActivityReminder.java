@@ -1,6 +1,14 @@
 package model.activities;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityReminder implements Activity {
     protected String name;
@@ -9,6 +17,14 @@ public class ActivityReminder implements Activity {
     protected Activity actChoice;
     protected ArrayList<Activity> homepageD;
     Tag tag = new Tag();
+    Activity breathe;
+    Activity exercise;
+    Activity hydrate;
+    Activity inspire;
+    Activity interact;
+    Activity rest;
+    Activity revitalize;
+    Activity refresh;
 
 
     public ActivityReminder() {
@@ -16,14 +32,14 @@ public class ActivityReminder implements Activity {
         this.status = "not yet completed";
 
         selectionD = new ArrayList<>();
-        Activity breathe = new Breathe();
-        Activity exercise = new Exercise();
-        Activity hydrate = new Hydrate();
-        Activity inspire = new Inspire();
-        Activity interact = new Interact();
-        Activity rest = new Rest();
-        Activity revitalize  = new Revitalize();
-        Activity refresh = new Refresh();
+        breathe = new Breathe();
+        exercise = new Exercise();
+        hydrate = new Hydrate();
+        inspire = new Inspire();
+        interact = new Interact();
+        rest = new Rest();
+        revitalize  = new Revitalize();
+        refresh = new Refresh();
 
 
         selectionD.add(breathe);
@@ -50,12 +66,14 @@ public class ActivityReminder implements Activity {
     // MODIFIES: this (  // modifies the set in which the object is called by the method)
     // EFFECTS: activity is added to the list if it's not
     // already in the list
-    public void addActivity(Activity actChoice) {
+    public void addActivity(Activity actChoice) throws FileNotFoundException, UnsupportedEncodingException {
         if (!homepageD.contains(actChoice)) {
             homepageD.add(actChoice);
             actChoice.setStatus();
+            saveActivity(homepageD);
         }
     }
+
 
     // REQUIRES: activity is an element of the list
     // MODIFIES: this
@@ -96,4 +114,55 @@ public class ActivityReminder implements Activity {
         }
 
     }
+
+
+
+    public void saveActivity(ArrayList<Activity> act) throws FileNotFoundException, UnsupportedEncodingException {
+        List<String> lines = new ArrayList<>();
+        PrintWriter writer = new PrintWriter("saveInput.txt","UTF-8");
+        for (Activity a: homepageD) {
+            lines.add(a.getClass().toString().substring(23));
+        }
+
+        for (String line : lines) {
+            writer.println(line);
+        }
+        writer.close();
+    }
+
+    public void loadActivities() throws IOException {
+
+        List<String> lines = Files.readAllLines(Paths.get("saveInput.txt"));
+
+        for (String line : lines) {
+            if (line.equals("Breathe")) {
+                addActivity(breathe);
+            } else if (line.equals("Exercise")) {
+                addActivity(exercise);
+            } else if (line.equals("Hydrate")) {
+                addActivity(hydrate);
+            } else if (line.equals("Inspire")) {
+                addActivity(inspire);
+            } else if (line.equals("Interact")) {
+                addActivity(interact);
+            } else if (line.equals("Refresh")) {
+                addActivity(refresh);
+            }
+            checkRestOrRevitalize(line);
+
+        }
+
+    }
+
+    private void checkRestOrRevitalize(String line) throws FileNotFoundException, UnsupportedEncodingException {
+        if (line.equals("Rest")) {
+            addActivity(rest);
+        } else if (line.equals("Revitalize")) {
+            addActivity(revitalize);
+        }
+    }
+
+
+
+
 }

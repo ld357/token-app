@@ -4,6 +4,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ActivityReminderTest {
@@ -11,6 +15,7 @@ class ActivityReminderTest {
     Category testCategory1;
     Category testCategory2;
     Activity Breathe;
+    Activity Exercise;
 
 
     @BeforeEach
@@ -30,7 +35,7 @@ class ActivityReminderTest {
 
 
     @Test
-    void testForSetStatus() {
+    void testForSetStatus() throws FileNotFoundException, UnsupportedEncodingException {
         Breathe = new Breathe();
         testActivityReminder.addActivity(Breathe);
         testActivityReminder.setStatus();
@@ -87,7 +92,7 @@ class ActivityReminderTest {
 
 
     @Test
-    void testAddActivity() {
+    void testAddActivity() throws FileNotFoundException, UnsupportedEncodingException {
         Breathe = new Breathe();
         testActivityReminder.addActivity(Breathe);
         assertEquals(1, testActivityReminder.homepageD.size());
@@ -95,7 +100,7 @@ class ActivityReminderTest {
     }
 
     @Test
-    void testAddActivityThere() {
+    void testAddActivityThere() throws FileNotFoundException, UnsupportedEncodingException {
         Breathe = new Breathe();
         testActivityReminder.addActivity(Breathe);
         assertEquals(1, testActivityReminder.homepageD.size());
@@ -113,13 +118,33 @@ class ActivityReminderTest {
     }
 
     @Test
-    void testAddThenRemoveActivity() {
+    void testAddThenRemoveActivity() throws FileNotFoundException, UnsupportedEncodingException {
         Breathe = new Breathe();
         testActivityReminder.addActivity(Breathe);
         assertEquals(1, testActivityReminder.homepageD.size());
         assertEquals("today", Breathe.getStatus());
         testActivityReminder.removeActivity(Breathe);
         assertEquals(0, testActivityReminder.homepageD.size());
+    }
+
+    @Test
+    void testSaving() throws FileNotFoundException, UnsupportedEncodingException {
+        Breathe = new Breathe();
+        Exercise = new Exercise();
+        testActivityReminder.addActivity(Breathe);
+        testActivityReminder.addActivity(Exercise);
+
+    }
+
+    @Test
+    void testLoading() throws IOException {
+        Breathe = new Breathe();
+        testActivityReminder.addActivity(Breathe);
+
+        testActivityReminder.loadActivities();
+
+        testActivityReminder.homepageD.contains(Breathe);
+
     }
 
 
