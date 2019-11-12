@@ -16,6 +16,7 @@ public class ActivityReminder implements Activity {
     protected ArrayList<Activity> selectionD;
     protected Activity actChoice;
     protected ArrayList<Activity> homepageD;
+    protected ArrayList<Activity> savedActivities;
     Tag tag = new Tag();
     Activity breathe;
     Activity exercise;
@@ -52,6 +53,7 @@ public class ActivityReminder implements Activity {
         selectionD.add(refresh);
 
         homepageD = new ArrayList<Activity>();
+        savedActivities = new ArrayList<Activity>();
         System.out.println("What would you like to remind yourself to do?");
 
     }
@@ -71,6 +73,13 @@ public class ActivityReminder implements Activity {
             homepageD.add(actChoice);
             actChoice.setStatus();
             saveActivity(homepageD);
+        }
+    }
+
+    public void addSavedActivity(Activity act) {
+        if (!savedActivities.contains(act)) {
+            savedActivities.add(actChoice);
+
         }
     }
 
@@ -135,18 +144,18 @@ public class ActivityReminder implements Activity {
         List<String> lines = Files.readAllLines(Paths.get("saveInput.txt"));
 
         for (String line : lines) {
-            if (line.equals("Breathe")) {
-                addActivity(breathe);
+            if (line.equals("Breathe")) { // repeating because adding to homepage data twice...
+                addSavedActivity(breathe);
             } else if (line.equals("Exercise")) {
-                addActivity(exercise);
+                addSavedActivity(exercise);
             } else if (line.equals("Hydrate")) {
-                addActivity(hydrate);
+                addSavedActivity(hydrate);
             } else if (line.equals("Inspire")) {
-                addActivity(inspire);
+                addSavedActivity(inspire);
             } else if (line.equals("Interact")) {
-                addActivity(interact);
+                addSavedActivity(interact);
             } else if (line.equals("Refresh")) {
-                addActivity(refresh);
+                addSavedActivity(refresh);
             }
             checkRestOrRevitalize(line);
 
@@ -156,9 +165,9 @@ public class ActivityReminder implements Activity {
 
     private void checkRestOrRevitalize(String line) throws FileNotFoundException, UnsupportedEncodingException {
         if (line.equals("Rest")) {
-            addActivity(rest);
+            addSavedActivity(rest);
         } else if (line.equals("Revitalize")) {
-            addActivity(revitalize);
+            addSavedActivity(revitalize);
         }
     }
 

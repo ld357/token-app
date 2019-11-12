@@ -176,20 +176,22 @@ class ActivityReminderTest {
         testActivityReminder.addActivity(Refresh);
         testActivityReminder.addActivity(Rest);
         testActivityReminder.addActivity(Revitalize);
+        testActivityReminder.addActivity(Revitalize);
 
 
         testActivityReminder.loadActivities();
 
-        testActivityReminder.homepageD.contains(Breathe);
-        testActivityReminder.homepageD.contains(Exercise);
-        testActivityReminder.homepageD.contains(Hydrate);
-        testActivityReminder.homepageD.contains(Inspire);
-        testActivityReminder.homepageD.contains(Interact);
-        testActivityReminder.homepageD.contains(Refresh);
-        testActivityReminder.homepageD.contains(Rest);
-        testActivityReminder.homepageD.contains(Revitalize);
+        testActivityReminder.savedActivities.contains(Breathe);
+        testActivityReminder.savedActivities.contains(Exercise);
+        testActivityReminder.savedActivities.contains(Hydrate);
+        testActivityReminder.savedActivities.contains(Inspire);
+        testActivityReminder.savedActivities.contains(Interact);
+        testActivityReminder.savedActivities.contains(Refresh);
+        testActivityReminder.savedActivities.contains(Rest);
+        testActivityReminder.savedActivities.contains(Revitalize);
 
     }
+
 
 
 }
