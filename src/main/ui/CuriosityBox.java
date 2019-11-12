@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CuriosityBox {
     public ArrayList<CuriosityEntry> operationLog;
     private Scanner scanner;
+    CuriosityEntry curiosityEntry;
 
     private CuriosityBox() {
         operationLog = new ArrayList<>();
@@ -16,15 +17,15 @@ public class CuriosityBox {
 
     private void processOperations() {
         String operation = "";
-        CuriosityEntry curiosityEntry = new CuriosityEntry();
+        curiosityEntry = new CuriosityEntry();
 
         while (true) { // while is a loop, end with break
-            System.out.println("Please select an option ([1] add thought "
-                    + "[2] remove thought or [3] quit):");
+            System.out.println("Please select an option ([1] add thought " + " or [2] remove a thought"
+                    + " or [3] quit):");
             operation = scanner.nextLine();
             System.out.println("You wrote: " + operation);
 
-            if (operation.equals("4")) {
+            if (operation.equals("3")) {
                 break;
             }
 
@@ -33,35 +34,46 @@ public class CuriosityBox {
                 System.out.println("you wrote:" + result);
             }
 
-            if (operation.equals("3")) {
-                //   curiosityEntry.getAllThoughts();
-                //   System.out.println("Which thought would you like to remove?");
-                //   operation = scanner.nextLine();
-                //  curiosityEntry.removeThought(operation);
-                System.out.println("Your thought has been removed.");
+            if (operation.equals("2")) {
+                removeThought(operation);
             }
 
-//            if (operation.equals("2")) {
-//                System.out.println("How are you feeling?");
-//                operation = scanner.nextLine();
-//                if (operation.equals("Amazing")) {
-//                    Amazing amazing = new Amazing();
-//                    amazing.announceMood();
-//                    amazing.soundMood();
-//
-//                }
 
         }
     }
 
 
+    public void removeThought(String operation) {
+        System.out.println(curiosityEntry.getAllThoughts());
+        System.out.println("Which thought would you like to remove?");
+        operation = scanner.nextLine();
+        System.out.println(operation);
+        int originalsize = curiosityEntry.allthoughts.size();
+
+        for (int i = 0; i < curiosityEntry.allthoughts.size(); i++) {
+            if (curiosityEntry.allthoughts.get(i).equals(operation)) {
+                curiosityEntry.removeThought(curiosityEntry.allthoughts.get(i));
+                System.out.println("Your thought has been removed.");
+            }
+        }
+    }
+
+
+     // for(int i = 0; i<myList.size(); i++){
+    //	System.out.println(myList.get(i));
+    //	if(myList.get(i).equals("3")){
+    //		myList.remove(i);
+    //		i--;
+    //		myList.add("6");
+    //	}
+    //}
 
     private String processOperation(CuriosityEntry curiosityEntry, String operation) {
         String result = "";
 
         System.out.println("What are you currently curious about?");
         String first = scanner.nextLine();
-        scanner.nextLine();
+      //  scanner.nextLine();
 
         result = " " + first;
 
