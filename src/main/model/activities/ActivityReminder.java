@@ -127,6 +127,7 @@ public class ActivityReminder implements Activity {
     public void setStatus() {
         for (Activity activity: selectionD) {
             activity.setStatus();
+           // System.out.println("Status set for activity in selection data!");
         }
 
     }
