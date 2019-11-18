@@ -12,12 +12,12 @@ import java.util.List;
 
 public class ActivityReminder implements Activity {
     protected String name;
-    protected String status;
-    protected ArrayList<Activity> selectionD;
+    public String status;
+    public ArrayList<Activity> selectionD;
     protected Activity actChoice;
-    protected ArrayList<Activity> homepageD;
-    protected ArrayList<Activity> savedActivities;
-    Tag tag = new Tag();
+    public ArrayList<Activity> homepageD;
+    public ArrayList<Activity> savedActivities;
+    public Tag tag = new Tag();
     Activity breathe;
     Activity exercise;
     Activity hydrate;
