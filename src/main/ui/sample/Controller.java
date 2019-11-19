@@ -12,7 +12,6 @@ public class Controller {
     TextArea textBoxInput;
 
     public void submitButtonClicked() {
-        System.out.println("its been clicked");
         writtenText = textBoxInput.getText();
         ce = new CuriosityEntry();
         ce.addThought(writtenText);
@@ -20,7 +19,4 @@ public class Controller {
 
     }
 
-    public void doneWritingThought() {
-        System.out.println("done");
-    }
 }
