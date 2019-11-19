@@ -58,7 +58,8 @@ public class MoodTracker {
     }
 
     // MODIFIES: this
-    // EFFECTS: mood is removed from list
+    // EFFECTS: if homepage data doesnt contain moon, throw MoodWasNotAdded exception,
+    //          otherwise, mood is removed from list
     public void removeMood(Mood moodChoice) throws MoodWasNotAdded {
         if (!homepagedata.contains(moodChoice)) {
             throw new MoodWasNotAdded();
@@ -67,7 +68,8 @@ public class MoodTracker {
     }
 
     // MODIFIES: this
-    // EFFECTS: changes mood to different mood
+    // EFFECTS: if mood choice is null, throws NoMoodChoiceSelected exception,
+    //          otherwise, changes mood to specific mood
     public void changeMood(Mood moodChoice) throws NoMoodChoiceSelected {
         if (this.moodChoice == null) {
             throw new NoMoodChoiceSelected();

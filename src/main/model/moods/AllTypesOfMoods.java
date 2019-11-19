@@ -12,12 +12,18 @@ public abstract class AllTypesOfMoods implements Mood {
     }
 
 
+    // MODIFIES: this
+    // EFFECTS: changes colour to the particular colour
     public void colourMood(String colour) {
         this.colour = colour;
     }
 
+    // MODIFIES: Mood
+    // EFFECTS: sets the sound of the mood
     protected abstract void soundMood();
 
+    // MODIFIES: Mood
+    // EFFECTS: sets the announcement of the mood
     protected abstract void announceMood();
 
 

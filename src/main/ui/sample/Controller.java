@@ -8,8 +8,7 @@ public class Controller {
     String writtenText;
     CuriosityEntry ce;
 
-    @FXML
-    TextArea textBoxInput;
+    @FXML TextArea textBoxInput;
 
     public void submitButtonClicked() {
         writtenText = textBoxInput.getText();
@@ -17,6 +16,10 @@ public class Controller {
         ce.addThought(writtenText);
         System.out.println(ce.getAllThoughts());
 
+    }
+
+    public void homeButtonClicked() {
+        // call home main
     }
 
 }

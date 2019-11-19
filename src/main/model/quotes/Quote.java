@@ -11,6 +11,8 @@ public class Quote {
         this.name = name;
     }
 
+    // MODIFIES: this, Author
+    // EFFECTS: if author is null, set author to the author and add quote for author for this quote
     public void addAuthor(Author a) {
         if (author == null) {
             this.author = a;
@@ -26,6 +28,9 @@ public class Quote {
         return this.name;
     }
 
+
+    // MODIFIES: this, Author
+    // EFFECTS: if author is equal to a, then set author to null and remove this quote from author
     public void removeAuthor(Author a) {
         if (this.author == a) {
             this.author = null;

@@ -31,14 +31,16 @@ public class Amazing extends AllTypesOfMoods implements Mood {
     }
 
     @Override
-    // EFFECTS: sets soundMood
+    // MODIFIES: this
+    // EFFECTS: sets soundMood to Yaay!
     public void soundMood() {
         this.soundMood = "Yaay!";
 
     }
 
     @Override
-    // EFFECTS: sets announceMood
+    // MODIFIES: this
+    // EFFECTS: sets announceMood to I am feeling amazing!
     public void announceMood() {
         this.announcement = "I am feeling amazing!";
     }

@@ -58,6 +58,8 @@ public class ActivityReminder implements Activity {
 
     }
 
+    // MODIFIES: this
+    // EFFECTS: changes status to today
     public void checkIn(Activity a) {
         this.status = "today";
     }
@@ -83,6 +85,9 @@ public class ActivityReminder implements Activity {
         }
     }
 
+
+    // MODIFIES: this
+    // EFFECTS: if activity isnt contained in saved activities list, then add activity
     public void addSavedActivity(Activity act) {
         if (!savedActivities.contains(act)) {
             savedActivities.add(actChoice);
@@ -100,14 +105,20 @@ public class ActivityReminder implements Activity {
         }
     }
 
+    // EFFECTS: provides tags according to category
     public void provideTags(Category category) {
         tag.provideTags(category);
     }
 
+    // MODIFIES: tag
+    // EFFECTS: adds category to hashmap
     public void addCategory(Category category) {
         tag.addCategory(category);
     }
 
+
+    // MODIFIES: tag
+    // EFFECTS: adds tag to particular category
     public void addTag(Category c, String label) {
         tag.addTag(c, label);
     }
@@ -134,6 +145,8 @@ public class ActivityReminder implements Activity {
 
 
 
+    // MODIFIES: this
+    // EFFECTS: saves the activity
     public void saveActivity(ArrayList<Activity> act) throws FileNotFoundException, UnsupportedEncodingException {
         List<String> lines = new ArrayList<>();
         PrintWriter writer = new PrintWriter("saveInput.txt","UTF-8");
@@ -147,6 +160,7 @@ public class ActivityReminder implements Activity {
         writer.close();
     }
 
+    // EFFECTS: loads the activities that were saved
     public void loadActivities() throws IOException {
 
         List<String> lines = Files.readAllLines(Paths.get("saveInput.txt"));
@@ -171,6 +185,7 @@ public class ActivityReminder implements Activity {
 
     }
 
+    // EFFECTS: loads rest or revitalize if it was saved
     private void checkRestOrRevitalize(String line) throws FileNotFoundException, UnsupportedEncodingException {
         if (line.equals("Rest")) {
             addSavedActivity(rest);

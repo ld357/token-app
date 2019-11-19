@@ -33,6 +33,8 @@ public class Collection {
 
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds names of all quotes to list and returns list
     public ArrayList<String> displayQuotes() {
         ArrayList<String> names;
         names = new ArrayList<>();
@@ -42,6 +44,8 @@ public class Collection {
         return names;
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds names of all authors to list and returns list
     public ArrayList<String> displayAuthors() {
         ArrayList<String> authorNames;
         authorNames = new ArrayList<String>();

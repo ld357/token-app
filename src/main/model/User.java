@@ -14,6 +14,7 @@ public class User implements Observer {
     }
 
 
+    // EFFECTS: prints out statement declaring that a new acitivty was added to lsit
     @Override
     public void update(Activity activity) {
         System.out.println("You have added " + activity.getActivityName() + " to your list");

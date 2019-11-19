@@ -38,6 +38,7 @@ public class Tag {
 
     }
 
+    // EFFECTS: prints out categories with tags
     public void provideTags(Category category) {
         ArrayList<String> names = categoryTags.get(category);
         for (String name: names) {
@@ -45,10 +46,14 @@ public class Tag {
         }
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds category to hashmap
     public void addCategory(Category category) {
         categoryTags.put(category, new ArrayList<>());
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds tag to specific category
     public void addTag(Category c, String tag) {
         ArrayList<String> tags = categoryTags.get(c);
         tags.add(tag);

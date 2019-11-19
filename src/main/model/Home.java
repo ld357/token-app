@@ -19,6 +19,8 @@ public class Home extends Subject {
     }
 
 
+    // MODIFIES: this
+    // EFFECTS: adds activity to activities and calls notifies observer that activity has been added
     public void addActivity(Activity a) {
         activities.add(a);
         notifyObserver(a);

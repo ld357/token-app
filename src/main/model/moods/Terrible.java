@@ -34,13 +34,15 @@ public class Terrible extends AllTypesOfMoods implements Mood {
     }
 
     @Override
+    // MODIFIES: this
     // EFFECTS: sets soundMood
     public void soundMood() {
         this.soundMood = "DARNN...";
     }
 
     @Override
-    // EFFECTS: sets announceMood
+    // MODIFIES: this
+    // EFFECTS: sets announceMood to I am feeling terrible!
     public void announceMood() {
         this.announcement = "I am feeling terrible!";
 

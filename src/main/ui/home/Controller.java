@@ -3,13 +3,9 @@ package ui.home;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
 import model.activities.*;
-import ui.CuriosityEntry;
-import ui.sample.Main;
 
-import java.awt.event.TextEvent;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 
@@ -115,8 +111,7 @@ public class Controller {
 
 
     public void quoteButtonClicked() throws Exception {
-     //   Main mn = new Main();
-     //   mn.main(null);
+
     }
 
 

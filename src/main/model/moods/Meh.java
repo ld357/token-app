@@ -34,13 +34,14 @@ public class Meh extends AllTypesOfMoods implements Mood {
     }
 
     @Override
-    // EFFECTS: sets soundMood
+    // MODIFIES: this
+    // EFFECTS: sets soundMood to Ehhhhh...
     public void soundMood() {
         this.soundMood = "Ehhhhh...";
     }
 
     @Override
-    // EFFECTS: sets announceMood
+    // EFFECTS: sets announceMood to I am feeling meh!
     public void announceMood() {
         this.announcement = "I am feeling meh!";
 

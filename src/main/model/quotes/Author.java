@@ -22,6 +22,8 @@ public class Author {
         return name;
     }
 
+    //  MODIFIES: this, Quote
+    // EFFECTS: verifies quote, if quote list doesn't contain quote then add quote and set author to this
     public void addQuote(Quote q) {
         quoteVerification(q);
 
@@ -31,12 +33,15 @@ public class Author {
         }
     }
 
+    // EFFECTS: checks if quote name is empty, prints out statement if true
     private void quoteVerification(Quote q) {
         if (q.name.equals("")) {
             System.out.println("This is not a quote!");
         }
     }
 
+    //  MODIFIES: this, Quote
+    // EFFECTS: verifies quote, if quote list contains quote then remove quote and remove this author from quote
     public void removeQuote(Quote q) {
         quoteVerification(q);
 

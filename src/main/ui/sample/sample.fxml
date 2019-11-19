@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.sample.Controller">
     <children>
-        <Button alignment="CENTER" layoutX="175.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#submitButtonClicked" text="Submit" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="174.0" />
-        <Label layoutX="95.0" layoutY="98.0" text="t h o u g h t  b o x" textFill="WHITE">
+        <Button alignment="CENTER" layoutX="176.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#submitButtonClicked" style="-fx-background-color: teal;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="Aller Bold" size="13.0" />
+         </font></Button>
+        <Label layoutX="124.0" layoutY="122.0" text="t h o u g h t s" textFill="WHITE">
             <font>
                 <Font name="Aller" size="29.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="115.0" layoutY="151.0" prefHeight="27.0" prefWidth="181.0" text="what are you thinking about?" textFill="WHITE" />
-        <TextArea fx:id="textBoxInput" layoutX="106.0" layoutY="212.0" prefHeight="177.0" prefWidth="200.0" promptText="type here..." AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="105.0">
+        <Label alignment="CENTER" layoutX="117.0" layoutY="173.0" prefHeight="27.0" prefWidth="181.0" text="what are you thinking about?" textFill="WHITE" />
+        <TextArea fx:id="textBoxInput" layoutX="107.0" layoutY="241.0" prefHeight="177.0" prefWidth="200.0" promptText="type here..." AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="104.0">
             <font>
                 <Font name="Aller" size="13.0" />
             </font></TextArea>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4da7bc" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="411.0" />
+      <Button layoutX="349.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="170.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T" />
+      <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="185.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/noun_Heart_2985345.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <Text fill="WHITE" layoutX="205.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K E N " />
+      <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="178.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/noun_Home_2984257.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
     </children>
 </AnchorPane>
