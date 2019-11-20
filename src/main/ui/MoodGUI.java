@@ -10,6 +10,7 @@ public class MoodGUI {
     // private JLabel statusLabel;
 
 
+    // EFFECTS: tries to set mood, then catches noMoodChoiceSelection if thrown, prints out "This is your mood"
     public void setMood(MoodTracker mt, Mood moodChoice) {
         try {
             mt.changeMood(moodChoice);
@@ -24,6 +25,7 @@ public class MoodGUI {
 
     }
 
+    // EFFECTS: tries to remove mood, catches moodWasNotAddedException if thrown, prints "This is your mood!"
     public void removeMood(MoodTracker mt, Mood moodChoice) {
         try {
             mt.removeMood(moodChoice);

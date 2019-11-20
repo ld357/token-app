@@ -67,6 +67,11 @@
                         <ColorAdjust brightness="1.0" />
                      </effect>
                   </ImageView>
+                  <Text fill="WHITE" layoutX="169.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="q u o t e s">
+                     <font>
+                        <Font name="Aller Bold" size="17.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
         </content>

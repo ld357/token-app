@@ -43,6 +43,8 @@ public class CuriosityBox {
     }
 
 
+    // MODIFIES: this
+    // EFFECTS: removes thought specified from light of thoughts
     public void removeThought(String operation) {
         System.out.println(curiosityEntry.getAllThoughts());
         System.out.println("Which thought would you like to remove?");
@@ -58,15 +60,6 @@ public class CuriosityBox {
         }
     }
 
-
-     // for(int i = 0; i<myList.size(); i++){
-    //	System.out.println(myList.get(i));
-    //	if(myList.get(i).equals("3")){
-    //		myList.remove(i);
-    //		i--;
-    //		myList.add("6");
-    //	}
-    //}
 
     private String processOperation(CuriosityEntry curiosityEntry, String operation) {
         String result = "";
