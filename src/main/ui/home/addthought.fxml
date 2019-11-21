@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.sample.Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.home.AdditionalThought">
     <children>
         <Button alignment="CENTER" layoutX="176.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#submitButtonClicked" style="-fx-background-color: teal;" text="Submit" textFill="WHITE">
          <font>
@@ -28,7 +28,7 @@
                 <Font name="Aller" size="13.0" />
             </font></TextArea>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4da7bc" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="411.0" />
-      <Button layoutX="349.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
+      <Button fx:id="homeButton" layoutX="349.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
       <Text fill="WHITE" layoutX="170.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T" />
       <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="185.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>

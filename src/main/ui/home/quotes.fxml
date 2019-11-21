@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.quotes.Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.home.QuoteController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4da7bc" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="411.0" />
       <ScrollPane layoutY="39.0" prefHeight="510.0" prefWidth="411.0">
@@ -37,12 +37,12 @@
                               <Font name="Aller Bold" size="36.0" />
                            </font>
                         </Text>
-                        <Text fx:id="quote4Text" fill="#4da7bc" layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quote4 inserted here">
+                        <Text fx:id="quote4Text" fill="#4da7bc" layoutX="49.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="May your choices reflect your hopes, not your fears." wrappingWidth="206.89502289891243">
                            <font>
                               <Font name="Aller" size="13.0" />
                            </font>
                         </Text>
-                        <Text fx:id="author4Text" fill="#837b7b" layoutX="187.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="author 4 name">
+                        <Text fx:id="author4Text" fill="#837b7b" layoutX="187.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nelson Mandela">
                            <font>
                               <Font name="Aller Italic" size="13.0" />
                            </font>
@@ -51,7 +51,7 @@
                   </Pane>
                   <Circle fill="#4da7bc" layoutX="309.0" layoutY="411.0" radius="13.0" strokeType="INSIDE" />
                   <Circle fill="#4da7bc" layoutX="344.0" layoutY="411.0" radius="13.0" strokeType="INSIDE" />
-                  <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="300.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="300.0" layoutY="403.0" onMouseClicked="#addFavouriteButtonClicked" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/noun_Star_2986785.png" />
                      </image>
@@ -59,7 +59,7 @@
                         <ColorAdjust brightness="1.0" />
                      </effect>
                   </ImageView>
-                  <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="335.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="335.0" layoutY="404.0" onMouseClicked="#removeButtonClicked" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/noun_subtract_289183.png" />
                      </image>
@@ -94,18 +94,18 @@
                   <Font name="Aller Bold" size="36.0" />
                </font>
             </Text>
-            <Text fx:id="quote1Text" fill="#4da7bc" layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quote1 inserted here">
+            <Text fx:id="quote1Text" fill="#4da7bc" layoutX="40.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you want to be happy, set a goal that commands your thoughts, liberates your energy, and inspires your hopes." wrappingWidth="240.7365996958573">
                <font>
                   <Font name="Aller" size="13.0" />
                </font>
             </Text>
-            <Text fx:id="author1Text" fill="#837b7b" layoutX="187.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="author 1 name">
+            <Text fx:id="author1Text" fill="#837b7b" layoutX="186.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Andrew Carnegie">
                <font>
                   <Font name="Aller Italic" size="13.0" />
                </font>
             </Text>
             <Circle fill="#4da7bc" layoutX="306.0" radius="13.0" strokeType="INSIDE" />
-            <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="262.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="262.0" layoutY="-8.0" onMouseClicked="#addFavouriteButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noun_Star_2986785.png" />
                </image>
@@ -113,7 +113,7 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </ImageView>
-            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="297.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="297.0" layoutY="-7.0" onMouseClicked="#removeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noun_subtract_289183.png" />
                </image>
@@ -140,19 +140,19 @@
                   <Font name="Aller Bold" size="36.0" />
                </font>
             </Text>
-            <Text fx:id="quote2Text" fill="#4da7bc" layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quote2 inserted here">
+            <Text fx:id="quote2Text" fill="#4da7bc" layoutX="44.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It does not matter how slowly you go so long as you do not stop." wrappingWidth="206.89501953125">
                <font>
                   <Font name="Aller" size="13.0" />
                </font>
             </Text>
-            <Text fx:id="author2Text" fill="#837b7b" layoutX="187.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="author 2 name">
+            <Text fx:id="author2Text" fill="#837b7b" layoutX="203.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confucius">
                <font>
                   <Font name="Aller Italic" size="13.0" />
                </font>
             </Text>
             <Circle fill="#4da7bc" layoutX="269.0" layoutY="3.0" radius="13.0" strokeType="INSIDE" />
             <Circle fill="#4da7bc" layoutX="304.0" layoutY="3.0" radius="13.0" strokeType="INSIDE" />
-            <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="260.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="260.0" layoutY="-5.0" onMouseClicked="#addFavouriteButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noun_Star_2986785.png" />
                </image>
@@ -160,7 +160,7 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </ImageView>
-            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="295.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="295.0" layoutY="-4.0" onMouseClicked="#removeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noun_subtract_289183.png" />
                </image>
@@ -187,19 +187,19 @@
                   <Font name="Aller Bold" size="36.0" />
                </font>
             </Text>
-            <Text fx:id="quote3Text" fill="#4da7bc" layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quote3 inserted here">
+            <Text fx:id="quote3Text" fill="#4da7bc" layoutX="40.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't be pushed by your problems. Be led by your dreams." wrappingWidth="206.89502141522826">
                <font>
                   <Font name="Aller" size="13.0" />
                </font>
             </Text>
-            <Text fx:id="author3Text" fill="#837b7b" layoutX="187.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="author 3 name">
+            <Text fx:id="author3Text" fill="#837b7b" layoutX="167.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ralph Waldo Emerson">
                <font>
                   <Font name="Aller Italic" size="13.0" />
                </font>
             </Text>
             <Circle fill="#4da7bc" layoutX="271.0" layoutY="-1.0" radius="13.0" strokeType="INSIDE" />
             <Circle fill="#4da7bc" layoutX="306.0" layoutY="-1.0" radius="13.0" strokeType="INSIDE" />
-            <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="262.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="26.0" layoutX="262.0" layoutY="-9.0" onMouseClicked="#addFavouriteButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noun_Star_2986785.png" />
                </image>
@@ -207,7 +207,7 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </ImageView>
-            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="297.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="297.0" layoutY="-8.0" onMouseClicked="#removeButtonClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noun_subtract_289183.png" />
                </image>
@@ -217,7 +217,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Button layoutX="348.0" layoutY="5.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
+      <Button fx:id="homeButton" layoutX="348.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
       <Text fill="WHITE" layoutX="170.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T" />
       <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="185.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>

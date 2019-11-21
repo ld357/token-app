@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.moods.Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.home.MoodController">
    <children>
       <Text fill="WHITE" layoutX="130.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="m o o d  t r a c k e r">
          <font>
@@ -37,7 +37,7 @@
          <children>
             <Pane prefHeight="119.0" prefWidth="350.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="-3.0" layoutY="-1.0" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
+                  <Rectangle fx:id="amazingRectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="-3.0" layoutY="-1.0" onMouseClicked="#amazingRectangleClicked" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -60,7 +60,7 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4f3f8" height="71.0" layoutX="-3.0" layoutY="-1.0" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
+                  <Rectangle fx:id="contentRectangle" arcHeight="5.0" arcWidth="5.0" fill="#e4f3f8" height="71.0" layoutX="-3.0" layoutY="-1.0" onMouseClicked="#contentRectangleClicked" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -83,7 +83,7 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="-3.0" layoutY="-1.0" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
+                  <Rectangle fx:id="mehRectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="-3.0" layoutY="-1.0" onMouseClicked="#mehRectangleClicked" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -106,7 +106,7 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4f3f8" height="71.0" layoutX="-3.0" layoutY="-1.0" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
+                  <Rectangle fx:id="badRectangle" arcHeight="5.0" arcWidth="5.0" fill="#e4f3f8" height="71.0" layoutX="-3.0" layoutY="-1.0" onMouseClicked="#badRectangleClicked" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -129,7 +129,7 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="-3.0" layoutY="1.0" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
+                  <Rectangle fx:id="terribleRectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="-3.0" layoutY="1.0" onMouseClicked="#terribleRectangleClicked" stroke="#4da7bc" strokeType="INSIDE" width="276.0">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -164,6 +164,6 @@
          </effect>
       </ImageView>
       <Text fill="WHITE" layoutX="209.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K E N " />
-      <Button layoutX="346.0" layoutY="3.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
+      <Button fx:id="homeButton" layoutX="346.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
    </children>
 </AnchorPane>

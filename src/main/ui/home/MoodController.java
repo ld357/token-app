@@ -1,18 +1,24 @@
-package ui.moods;
+package ui.home;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import model.moods.*;
 import ui.CuriosityEntry;
 
-public class Controller {
+import java.io.IOException;
+
+public class MoodController {
 
     @FXML Rectangle amazingRectangle;
     @FXML Rectangle contentRectangle;
     @FXML Rectangle mehRectangle;
     @FXML Rectangle badRectangle;
     @FXML Rectangle terribleRectangle;
+    @FXML AnchorPane rootPane;
+
 
     public void amazingRectangleClicked() {
         MoodTracker moods = new MoodTracker();
@@ -49,7 +55,9 @@ public class Controller {
         System.out.println(terrible.getMoodName() + " has been selected");
     }
 
-    public void homeButtonClicked() {
+    public void homeButtonClicked() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("home.fxml"));
+        rootPane.getChildren().setAll(pane);
 
     }
 

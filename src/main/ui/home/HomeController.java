@@ -1,15 +1,17 @@
 package ui.home;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import model.activities.*;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-public class Controller {
+public class HomeController {
     ActivityReminder activityReminder = new ActivityReminder();
     Activity breathe;
     Activity exercise;
@@ -20,8 +22,6 @@ public class Controller {
     Activity rest;
     Activity revitalize;
 
-
-
     @FXML Pane breathePane;
     @FXML Pane exercisePane;
     @FXML Pane hydratePane;
@@ -31,12 +31,13 @@ public class Controller {
     @FXML Pane restPane;
     @FXML Pane revitalizePane;
     @FXML Text breatheNYC;
-    @FXML Button thoughtButton;
-    @FXML Button quoteButton;
-    @FXML Button moodButton;
+    @FXML AnchorPane rootPane;
 
+    // TODO: Need to figure out how to change "not yet completed" to "today" and change icons to black?
+    // TODO: Adding message bar at the top?
 
     public void breathePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Breathe activity selected");
         breathe = new Breathe();
         activityReminder.addActivity(breathe);
@@ -45,6 +46,7 @@ public class Controller {
     }
 
     public void exercisePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Exercise activity selected");
         exercise = new Exercise();
         activityReminder.addActivity(exercise);
@@ -53,6 +55,7 @@ public class Controller {
     }
 
     public void hydratePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Hydrate activity selected");
         hydrate = new Hydrate();
         activityReminder.addActivity(hydrate);
@@ -61,6 +64,7 @@ public class Controller {
     }
 
     public void inspirePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Inspire activity selected");
         inspire = new Inspire();
         activityReminder.addActivity(inspire);
@@ -69,6 +73,7 @@ public class Controller {
     }
 
     public void interactPaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Interact activity selected");
         interact = new Interact();
         activityReminder.addActivity(interact);
@@ -77,6 +82,7 @@ public class Controller {
     }
 
     public void refreshPaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Refresh activity selected");
         refresh = new Refresh();
         activityReminder.addActivity(refresh);
@@ -85,6 +91,7 @@ public class Controller {
     }
 
     public void restPaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Rest activity selected");
         rest = new Rest();
         activityReminder.addActivity(rest);
@@ -94,6 +101,7 @@ public class Controller {
 
 
     public void revitalizePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
+        System.out.println(activityReminder.savedActivities);
         System.out.println("Revitalize activity selected");
         revitalize = new Revitalize();
         activityReminder.addActivity(revitalize);
@@ -101,16 +109,23 @@ public class Controller {
         activityReminder.setStatus();
     }
 
-    public void thoughtButtonClicked() {
+    public void thoughtButtonClicked() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("thoughts.fxml"));
+        rootPane.getChildren().setAll(pane);
+
 
     }
 
-    public void moodButtonClicked() {
+    public void moodButtonClicked() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("moods.fxml"));
+        rootPane.getChildren().setAll(pane);
 
     }
 
 
     public void quoteButtonClicked() throws Exception {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("quotes.fxml"));
+        rootPane.getChildren().setAll(pane);
 
     }
 

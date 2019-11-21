@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.thoughts.Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="411.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.home.ThoughtsController">
     <children>
         <Label layoutX="118.0" layoutY="157.0" text="t h o u g h t s  " textFill="WHITE">
             <font>
@@ -20,7 +20,7 @@
         <Label alignment="CENTER" layoutX="114.0" layoutY="214.0" prefHeight="27.0" prefWidth="181.0" text="what would you like to do?" textFill="WHITE" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4da7bc" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="411.0" />
         <Text fill="WHITE" layoutX="173.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T" />
-        <Button layoutX="349.0" layoutY="6.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
+        <Button fx:id="homeButton" layoutX="349.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" prefHeight="21.0" prefWidth="57.0" style="-fx-background-color: teal;" text="home" textFill="WHITE" />
       <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="177.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/noun_Home_2984257.png" />
@@ -29,17 +29,17 @@
             <ColorAdjust brightness="1.0" />
          </effect>
       </ImageView>
-      <Button layoutX="129.0" layoutY="287.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: skyblue;" text="add thought" textFill="WHITE">
+      <Button fx:id="addThoughtsButton" layoutX="129.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#addButtonClicked" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: skyblue;" text="add thought" textFill="WHITE">
          <font>
             <Font name="Aller Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="129.0" layoutY="354.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: skyblue;" text="see thoughts" textFill="WHITE">
+      <Button fx:id="seeThoughtsButton" layoutX="129.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#seeThoughtsButtonClicked" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: skyblue;" text="see thoughts" textFill="WHITE">
          <font>
             <Font name="Aller Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="129.0" layoutY="422.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: skyblue;" text="remove thougts" textFill="WHITE">
+      <Button fx:id="removeThoughtsButton" layoutX="129.0" layoutY="422.0" mnemonicParsing="false" onMouseClicked="#removeButtonClicked" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: skyblue;" text="remove thougts" textFill="WHITE">
          <font>
             <Font name="Aller Bold" size="13.0" />
          </font>

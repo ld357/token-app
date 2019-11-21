@@ -1,4 +1,4 @@
-package ui.moods;
+package ui.home;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,15 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
-public class Main extends Application {
+public class ThoughtsMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("moods.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("thoughts.fxml"));
 
-        //    URL url = Paths.get("src/sample/sample.fxml").toUri().toURL();
+        //    URL url = Paths.get("src/sample/addthought.fxml").toUri().toURL();
         //  Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Thoughts");
         primaryStage.setScene(new Scene(root, 400, 700));
@@ -25,5 +23,4 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }
