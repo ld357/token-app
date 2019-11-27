@@ -86,6 +86,7 @@ public class CuriosityBox {
     }
 
 
+    // EFFECTS: instantiates new CuriosityBox
     public static void main(String[] args) {
         new CuriosityBox();
 

@@ -34,6 +34,7 @@ public class QuoteController {
 
     }
 
+    // EFFECTS: loads home pane when button is clicked and gets its children
     public void homeButtonClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("home.fxml"));
         rootPane.getChildren().setAll(pane);

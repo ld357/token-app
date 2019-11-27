@@ -36,6 +36,8 @@ public class HomeController {
     // TODO: Need to figure out how to change "not yet completed" to "today" and change icons to black?
     // TODO: Adding message bar at the top?
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void breathePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Breathe activity selected");
@@ -45,6 +47,8 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void exercisePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Exercise activity selected");
@@ -54,6 +58,8 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void hydratePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Hydrate activity selected");
@@ -63,6 +69,8 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void inspirePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Inspire activity selected");
@@ -72,6 +80,8 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void interactPaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Interact activity selected");
@@ -81,6 +91,8 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void refreshPaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Refresh activity selected");
@@ -90,6 +102,8 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void restPaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Rest activity selected");
@@ -100,6 +114,8 @@ public class HomeController {
     }
 
 
+    // MODIFIES: Activity Reminder
+    // EFFECTS: when pane clicked, adds activity to Activity reminder, checks in and sets the status
     public void revitalizePaneClicked() throws FileNotFoundException, UnsupportedEncodingException {
         System.out.println(activityReminder.savedActivities);
         System.out.println("Revitalize activity selected");
@@ -109,6 +125,7 @@ public class HomeController {
         activityReminder.setStatus();
     }
 
+    // EFFECTS: loads thoughts pane when button is clicked and gets its children
     public void thoughtButtonClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("thoughts.fxml"));
         rootPane.getChildren().setAll(pane);
@@ -116,13 +133,14 @@ public class HomeController {
 
     }
 
+    // EFFECTS: loads moods pane when button is clicked and gets its children
     public void moodButtonClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("moods.fxml"));
         rootPane.getChildren().setAll(pane);
 
     }
 
-
+    // EFFECTS: loads quotes pane when button is clicked and gets its children
     public void quoteButtonClicked() throws Exception {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("quotes.fxml"));
         rootPane.getChildren().setAll(pane);

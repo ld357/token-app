@@ -16,6 +16,9 @@ public class AdditionalThought {
     @FXML TextArea textBoxInput;
     @FXML AnchorPane rootPane;
 
+    // MODIFIES: CuriosityEntry
+    // EFFECTS: when submit button is clicked,
+    //          gets text from text box, adds thought to curiosityEntry, then prints out all thoughts
     public void submitButtonClicked() {
         writtenText = textBoxInput.getText();
         ce = new CuriosityEntry();
@@ -24,6 +27,7 @@ public class AdditionalThought {
 
     }
 
+    // EFFECTS: loads home pane when home button is clicked and gets its children
     public void homeButtonClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("home.fxml"));
         rootPane.getChildren().setAll(pane);

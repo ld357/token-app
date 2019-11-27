@@ -10,6 +10,7 @@ import model.quotes.Collection;
 public class Quotes {
 
 
+    // EFFECTS: declares and instantiates new Collection, then calls display for all authors and quotes
     public static void main(String[] args) {
         Collection quotes = new Collection();
         quotes.displayQuotes();

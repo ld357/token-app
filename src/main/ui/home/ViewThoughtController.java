@@ -17,6 +17,8 @@ public class ViewThoughtController {
 
     // TODO: Figure out how to put in remove button function too
 
+    // MODIFIES: Curiosity Entry
+    // EFFECTS: adds thought to Curiosity Entry and prints statement
     public void submitButtonClicked() {
         writtenText = textBoxInput.getText();
         ce = new CuriosityEntry();
@@ -26,6 +28,7 @@ public class ViewThoughtController {
     }
 
 
+    // EFFECTS: loads add thoughts pane when button is clicked and gets its children
     public void addThoughtClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("addthought.fxml"));
         rootPane.getChildren().setAll(pane);
@@ -37,6 +40,7 @@ public class ViewThoughtController {
 
     }
 
+    // EFFECTS: loads home pane when button is clicked and gets its children
     public void homeButtonClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("home.fxml"));
         rootPane.getChildren().setAll(pane);

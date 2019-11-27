@@ -10,6 +10,7 @@ public class MoodGUI {
     // private JLabel statusLabel;
 
 
+    // MODIFIES: MoodTracker
     // EFFECTS: tries to set mood, then catches noMoodChoiceSelection if thrown, prints out "This is your mood"
     public void setMood(MoodTracker mt, Mood moodChoice) {
         try {
@@ -25,6 +26,7 @@ public class MoodGUI {
 
     }
 
+    // MODIFIES: MoodTracker
     // EFFECTS: tries to remove mood, catches moodWasNotAddedException if thrown, prints "This is your mood!"
     public void removeMood(MoodTracker mt, Mood moodChoice) {
         try {
@@ -39,6 +41,7 @@ public class MoodGUI {
         }
     }
 
+    // EFFECTS: declares and instantiates new MoodTracker
     public static void main(String[] args) {
         MoodTracker moods = new MoodTracker();
     }

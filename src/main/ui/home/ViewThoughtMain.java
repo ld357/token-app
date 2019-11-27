@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ViewThoughtMain extends Application {
+
+    // EFFECTS: loads fxml file and creates scene
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("seethoughts.fxml"));
@@ -17,6 +19,7 @@ public class ViewThoughtMain extends Application {
 
     }
 
+    // EFFECTS: launches the system
     public static void main(String[] args) {
         launch(args);
     }

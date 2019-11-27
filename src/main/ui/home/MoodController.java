@@ -20,6 +20,8 @@ public class MoodController {
     @FXML AnchorPane rootPane;
 
 
+    // MODIFIES: Mood Tracker
+    // EFFECTS: when clicked, adds mood to Mood Tracker, prints out statement
     public void amazingRectangleClicked() {
         MoodTracker moods = new MoodTracker();
         Mood amazing = new Amazing();
@@ -27,6 +29,8 @@ public class MoodController {
         System.out.println(amazing.getMoodName() + " has been selected");
     }
 
+    // MODIFIES: Mood Tracker
+    // EFFECTS: when clicked, adds mood to Mood Tracker, prints out statement
     public void contentRectangleClicked() {
         MoodTracker moods = new MoodTracker();
         Mood content = new Content();
@@ -34,6 +38,8 @@ public class MoodController {
         System.out.println(content.getMoodName() + " has been selected");
     }
 
+    // MODIFIES: Mood Tracker
+    // EFFECTS: when clicked, adds mood to Mood Tracker, prints out statement
     public void mehRectangleClicked() {
         MoodTracker moods = new MoodTracker();
         Mood meh = new Meh();
@@ -41,6 +47,8 @@ public class MoodController {
         System.out.println(meh.getMoodName() + " has been selected");
     }
 
+    // MODIFIES: Mood Tracker
+    // EFFECTS: when clicked, adds mood to Mood Tracker, prints out statement
     public void badRectangleClicked() {
         MoodTracker moods = new MoodTracker();
         Mood bad = new Bad();
@@ -48,6 +56,8 @@ public class MoodController {
         System.out.println(bad.getMoodName() + " has been selected");
     }
 
+    // MODIFIES: Mood Tracker
+    // EFFECTS: when clicked, adds mood to Mood Tracker, prints out statement
     public void terribleRectangleClicked() {
         MoodTracker moods = new MoodTracker();
         Mood terrible = new Terrible();
@@ -55,6 +65,7 @@ public class MoodController {
         System.out.println(terrible.getMoodName() + " has been selected");
     }
 
+    // EFFECTS: loads home pane when button is clicked and gets its children
     public void homeButtonClicked() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("home.fxml"));
         rootPane.getChildren().setAll(pane);
